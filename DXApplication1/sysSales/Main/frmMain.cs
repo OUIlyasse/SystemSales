@@ -18,6 +18,8 @@ namespace sysSales.Main
         public frmMain()
         {
             InitializeComponent();
+            ShowDate();
+            ShowTime();
         }
         private void btnSoftware_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

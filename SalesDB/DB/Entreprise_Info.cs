@@ -32,8 +32,9 @@ namespace SalesDB.DB
         public string entr_Fax1 { get; set; }
         public string entr_Fax2 { get; set; }
         public string entr_Email { get; set; }
-        public byte[] entr_Image { get; set; }
         public string entr_Note { get; set; }
+        public string entr_Mobile3 { get; set; }
+        public string entr_Fixe3 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Branche> Branches { get; set; }

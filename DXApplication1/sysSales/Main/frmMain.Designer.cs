@@ -89,8 +89,14 @@
             this.btnSoftware.Caption = "Software";
             this.btnSoftware.Id = 1;
             this.btnSoftware.ImageOptions.Image = global::sysSales.Properties.Resources.software_32;
+            this.btnSoftware.ItemAppearance.Disabled.Font = new System.Drawing.Font("Lucida Sans", 9F);
+            this.btnSoftware.ItemAppearance.Disabled.Options.UseFont = true;
+            this.btnSoftware.ItemAppearance.Hovered.Font = new System.Drawing.Font("Lucida Sans", 9F);
+            this.btnSoftware.ItemAppearance.Hovered.Options.UseFont = true;
             this.btnSoftware.ItemAppearance.Normal.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSoftware.ItemAppearance.Normal.Options.UseFont = true;
+            this.btnSoftware.ItemAppearance.Pressed.Font = new System.Drawing.Font("Lucida Sans", 9F);
+            this.btnSoftware.ItemAppearance.Pressed.Options.UseFont = true;
             this.btnSoftware.Name = "btnSoftware";
             this.btnSoftware.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnSoftware.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSoftware_ItemClick);
@@ -133,7 +139,7 @@
             this.txtUsername.Caption = "Username";
             this.txtUsername.Id = 7;
             this.txtUsername.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtUsername.ImageOptions.Image")));
-            this.txtUsername.ItemAppearance.Normal.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ItemAppearance.Normal.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ItemAppearance.Normal.Options.UseFont = true;
             this.txtUsername.Name = "txtUsername";
             // 
@@ -165,7 +171,7 @@
             this.dtDate.Edit = this.repositoryItemDateEdit1;
             this.dtDate.EditWidth = 180;
             this.dtDate.Id = 10;
-            this.dtDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtDate.ImageOptions.Image")));
+            this.dtDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("dtDate.ImageOptions.Image")));
             this.dtDate.Name = "dtDate";
             // 
             // repositoryItemDateEdit1
@@ -177,7 +183,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.DisplayFormat.FormatString = "D";
+            this.repositoryItemDateEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit1.EditFormat.FormatString = "D";
+            this.repositoryItemDateEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit1.Mask.EditMask = "D";
             this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
+            this.repositoryItemDateEdit1.ReadOnly = true;
             this.repositoryItemDateEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
             // ribbonPageSettings

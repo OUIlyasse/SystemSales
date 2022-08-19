@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SystemSalesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SystemSalesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Banque">
           <Key>
             <PropertyRef Name="ban_ID" />
@@ -349,12 +349,13 @@
           <Property Name="entr_Adresse2" Type="nvarchar(max)" />
           <Property Name="entr_Mobile1" Type="nvarchar(max)" />
           <Property Name="entr_Mobile2" Type="nvarchar(max)" />
+          <Property Name="entr_Mobile3" Type="nvarchar(max)" />
           <Property Name="entr_Fixe1" Type="nvarchar(max)" />
           <Property Name="entr_Fixe2" Type="nvarchar(max)" />
+          <Property Name="entr_Fixe3" Type="nvarchar(max)" />
           <Property Name="entr_Fax1" Type="nvarchar(max)" />
           <Property Name="entr_Fax2" Type="nvarchar(max)" />
           <Property Name="entr_Email" Type="nvarchar(max)" />
-          <Property Name="entr_Image" Type="image" />
           <Property Name="entr_Note" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Facture_Achat">
@@ -3043,8 +3044,7 @@
             <End Role="Unite_Type" EntitySet="Unite_Type" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SystemSalesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -3473,9 +3473,10 @@
           <Property Name="entr_Fax1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="entr_Fax2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="entr_Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="entr_Image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="entr_Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Branches" Relationship="Self.FK_Branche_Entreprise_Info" FromRole="Entreprise_Info" ToRole="Branche" />
+          <Property Name="entr_Mobile3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="entr_Fixe3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Facture_Achat">
           <Key>
@@ -6324,7 +6325,7 @@
             <End Role="Unite_Mesure" EntitySet="Unite_Mesure" />
             <End Role="Unite_Type" EntitySet="Unite_Type" />
           </AssociationSet>
-          <FunctionImport Name="MaxID_Entreprise_Info" ReturnType="Collection(Decimal)" />
+          <FunctionImport Name="MaxID_Entreprise_Info" EntitySet="Entreprise_Info" ReturnType="Collection(SystemSalesModel.Entreprise_Info)" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -6692,6 +6693,8 @@
           <EntitySetMapping Name="Entreprise_Info">
             <EntityTypeMapping TypeName="SystemSalesModel.Entreprise_Info">
               <MappingFragment StoreEntitySet="Entreprise_Info">
+                <ScalarProperty Name="entr_Fixe3" ColumnName="entr_Fixe3" />
+                <ScalarProperty Name="entr_Mobile3" ColumnName="entr_Mobile3" />
                 <ScalarProperty Name="entr_ID" ColumnName="entr_ID" />
                 <ScalarProperty Name="entr_Code" ColumnName="entr_Code" />
                 <ScalarProperty Name="entr_Nom" ColumnName="entr_Nom" />
@@ -6704,7 +6707,6 @@
                 <ScalarProperty Name="entr_Fax1" ColumnName="entr_Fax1" />
                 <ScalarProperty Name="entr_Fax2" ColumnName="entr_Fax2" />
                 <ScalarProperty Name="entr_Email" ColumnName="entr_Email" />
-                <ScalarProperty Name="entr_Image" ColumnName="entr_Image" />
                 <ScalarProperty Name="entr_Note" ColumnName="entr_Note" />
               </MappingFragment>
             </EntityTypeMapping>
