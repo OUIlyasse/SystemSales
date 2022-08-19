@@ -266,6 +266,8 @@
     <Compile Include="DB\Unite_Type.cs">
       <DependentUpon>SDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Proc_DB\CRUD.cs" />
+    <Compile Include="Proc_DB\IData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -274,9 +276,7 @@
       <Name>myTools</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Proc_DB\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EntityDeploy Include="DB\SDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
