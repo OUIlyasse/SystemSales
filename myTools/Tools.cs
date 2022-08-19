@@ -46,7 +46,6 @@ namespace myTools
         {
             XtraMessageBox.Show(msg, title, button, icon);
         }
-
         private static bool isFormActived(RibbonForm frmMain, XtraForm formChild, XtraTabbedMdiManager mdiManager)
         {
             bool IsOpenend = false;
