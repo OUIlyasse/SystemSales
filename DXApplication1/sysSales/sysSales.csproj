@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IForms\IFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IForms\IFrm.Designer.cs">
+      <DependentUpon>IFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="IForms\IFrm.resx">
+      <DependentUpon>IFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,11 +107,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="IForms\" />
     <Folder Include="Sub\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\software_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recycle_Bin_Full_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
