@@ -31,8 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +50,222 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Banque.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Bon_Destruction.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Bon_Destruction_Produit.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Bon_Entree.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Bon_Entree_Produit.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Bon_Sortie.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Bon_Sortie_Produit.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Bon_Type.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Branche.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Charge.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Charge_Type.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Client.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Compte_Bancaire.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Compte_Charge.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Compte_Client.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Compte_Employee.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Compte_Espece.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Compte_Fournisseur.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Compte_Local.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Compte_Local_Type.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Devise.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Devise_Banque.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Employee.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Employee_Salaire.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Entreprise_Info.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Achat.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Achat_Bonus.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Achat_Produit.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Achat_Produit_Retour.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Achat_Retour.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Paiement_Type.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Type.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Vente.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Vente_Bonus.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Vente_Produit.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Vente_Produit_Retour.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Facture_Vente_Retour.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Fournisseur.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Impot.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Magasin.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Magasin_Branche.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Main_Caisse.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Bon_Entree_Magasin.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Bon_Sortie_Magasin.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Caisse.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Facture_Achat.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Facture_Achat_Retour.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Facture_Vente.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Facture_Vente_Retour.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Impot.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Recu_Achat.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Operation_Recu_Vente.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit_Barcode.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit_Boxe.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit_Categorie.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit_Detail.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit_Emplacement.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit_Image.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit_Section.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Produit_Type.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Recu_Achat.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Recu_Type.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Recu_Vente.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Traitement.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Unite_Mesure.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Unite_Type.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +273,37 @@
       <Project>{56684e71-2ff8-401d-8aea-d3657a4a00cc}</Project>
       <Name>myTools</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Proc_DB\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DB\SDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DB\SDB.edmx.diagram">
+      <DependentUpon>SDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\SDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SDB.Context.cs</LastGenOutput>
+      <DependentUpon>SDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="DB\SDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SDB.edmx</DependentUpon>
+      <LastGenOutput>SDB.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
