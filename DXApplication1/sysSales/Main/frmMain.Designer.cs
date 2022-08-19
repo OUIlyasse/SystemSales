@@ -34,21 +34,22 @@
             this.btnSoftware = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPageSettings = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.txtUsername = new DevExpress.XtraBars.BarStaticItem();
             this.txtMsg = new DevExpress.XtraBars.BarStaticItem();
             this.txtTime = new DevExpress.XtraBars.BarStaticItem();
-            this.txtDate = new DevExpress.XtraBars.BarEditItem();
+            this.dtDate = new DevExpress.XtraBars.BarEditItem();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.ribbonPageSettings = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
             this.mdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.timerTimes = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
@@ -70,7 +71,7 @@
             this.txtUsername,
             this.txtMsg,
             this.txtTime,
-            this.txtDate});
+            this.dtDate});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ribbon.MaxItemId = 11;
@@ -92,6 +93,7 @@
             this.btnSoftware.ItemAppearance.Normal.Options.UseFont = true;
             this.btnSoftware.Name = "btnSoftware";
             this.btnSoftware.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSoftware.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSoftware_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -104,40 +106,6 @@
             this.barButtonItem3.Caption = "barButtonItem3";
             this.barButtonItem3.Id = 3;
             this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // ribbonPageSettings
-            // 
-            this.ribbonPageSettings.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ribbonPageSettings.Appearance.Options.UseFont = true;
-            this.ribbonPageSettings.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPageSettings.Name = "ribbonPageSettings";
-            this.ribbonPageSettings.Text = "Settings";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.btnSoftware);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
-            this.ribbonPageGroup1.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.ShowCaptionButton = false;
-            // 
-            // ribbonStatusBar
-            // 
-            this.ribbonStatusBar.ItemLinks.Add(this.txtUsername);
-            this.ribbonStatusBar.ItemLinks.Add(this.txtMsg, true);
-            this.ribbonStatusBar.ItemLinks.Add(this.txtDate);
-            this.ribbonStatusBar.ItemLinks.Add(this.txtTime);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 650);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.ribbonStatusBar.Name = "ribbonStatusBar";
-            this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1186, 29);
-            // 
-            // defaultLookAndFeel1
-            // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
             // 
             // barSubItem1
             // 
@@ -190,15 +158,15 @@
             this.txtTime.TextAlignment = System.Drawing.StringAlignment.Center;
             this.txtTime.Width = 100;
             // 
-            // txtDate
+            // dtDate
             // 
-            this.txtDate.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.txtDate.AutoHideEdit = false;
-            this.txtDate.Edit = this.repositoryItemDateEdit1;
-            this.txtDate.EditWidth = 180;
-            this.txtDate.Id = 10;
-            this.txtDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barEditItem1.ImageOptions.Image")));
-            this.txtDate.Name = "txtDate";
+            this.dtDate.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.dtDate.AutoHideEdit = false;
+            this.dtDate.Edit = this.repositoryItemDateEdit1;
+            this.dtDate.EditWidth = 180;
+            this.dtDate.Id = 10;
+            this.dtDate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtDate.ImageOptions.Image")));
+            this.dtDate.Name = "dtDate";
             // 
             // repositoryItemDateEdit1
             // 
@@ -212,6 +180,40 @@
             this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
             this.repositoryItemDateEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
+            // ribbonPageSettings
+            // 
+            this.ribbonPageSettings.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ribbonPageSettings.Appearance.Options.UseFont = true;
+            this.ribbonPageSettings.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPageSettings.Name = "ribbonPageSettings";
+            this.ribbonPageSettings.Text = "Settings";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnSoftware);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup1.ItemsLayout = DevExpress.XtraBars.Ribbon.RibbonPageGroupItemsLayout.OneRow;
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.ShowCaptionButton = false;
+            // 
+            // ribbonStatusBar
+            // 
+            this.ribbonStatusBar.ItemLinks.Add(this.txtUsername);
+            this.ribbonStatusBar.ItemLinks.Add(this.txtMsg, true);
+            this.ribbonStatusBar.ItemLinks.Add(this.dtDate);
+            this.ribbonStatusBar.ItemLinks.Add(this.txtTime);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 650);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ribbonStatusBar.Name = "ribbonStatusBar";
+            this.ribbonStatusBar.Ribbon = this.ribbon;
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1186, 29);
+            // 
+            // defaultLookAndFeel1
+            // 
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
+            // 
             // navBarControl1
             // 
             this.navBarControl1.ActiveGroup = this.navBarGroup1;
@@ -220,6 +222,7 @@
             this.navBarGroup1});
             this.navBarControl1.Location = new System.Drawing.Point(0, 181);
             this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 274;
             this.navBarControl1.Size = new System.Drawing.Size(274, 469);
             this.navBarControl1.TabIndex = 2;
             this.navBarControl1.Text = "navBarControl1";
@@ -238,6 +241,11 @@
             this.mdiManager.AppearancePage.HeaderActive.Options.UseFont = true;
             this.mdiManager.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeader;
             this.mdiManager.MdiParent = this;
+            // 
+            // timerTimes
+            // 
+            this.timerTimes.Interval = 1000;
+            this.timerTimes.Tick += new System.EventHandler(this.timerTimes_Tick);
             // 
             // frmMain
             // 
@@ -283,10 +291,11 @@
         private DevExpress.XtraBars.BarStaticItem txtUsername;
         private DevExpress.XtraBars.BarStaticItem txtMsg;
         private DevExpress.XtraBars.BarStaticItem txtTime;
-        private DevExpress.XtraBars.BarEditItem txtDate;
+        private DevExpress.XtraBars.BarEditItem dtDate;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager mdiManager;
+        private System.Windows.Forms.Timer timerTimes;
     }
 }
