@@ -8,6 +8,10 @@ namespace myTools
 {
     public class Tools
     {
+        public static DateTime GetDateTime()
+        {
+            return DateTime.Now;
+        }
         /// <summary>
         /// Display the message in Devexpress style
         /// </summary>
@@ -46,6 +50,22 @@ namespace myTools
         {
             XtraMessageBox.Show(msg, title, button, icon);
         }
+        /// <summary>
+        /// Open form into XtraTabbedMdiManager
+        /// </summary>
+        /// <param name="frmMain">Main Form</param>
+        /// <param name="formChild">Form Child</param>
+        /// <param name="mdiManager">XtraTabbedMdiManager</param>
+        public static void OpenForm(RibbonForm frmMain, XtraForm formChild, XtraTabbedMdiManager mdiManager)
+        {
+            if (!isFormActived(frmMain, formChild, mdiManager))
+            {
+                formChild.MdiParent = frmMain;
+
+                formChild.WindowState = FormWindowState.Maximized;
+                formChild.Show();
+            }
+        }
         private static bool isFormActived(RibbonForm frmMain, XtraForm formChild, XtraTabbedMdiManager mdiManager)
         {
             bool IsOpenend = false;
@@ -61,24 +81,6 @@ namespace myTools
                 }
             }
             return IsOpenend;
-        }
-        /// <summary>
-        /// Open form into XtraTabbedMdiManager
-        /// </summary>
-        /// <param name="frmMain">Main Form</param>
-        /// <param name="formChild">Form Child</param>
-        /// <param name="mdiManager">XtraTabbedMdiManager</param>
-        public static void OpenForm(RibbonForm frmMain, XtraForm formChild, XtraTabbedMdiManager mdiManager)
-        {
-            if (!isFormActived(frmMain, formChild, mdiManager))
-            {
-                formChild.MdiParent = frmMain;
-                formChild.Show();
-            }
-        }
-        public static DateTime GetDateTime()
-        {
-            return DateTime.Now;
         }
     }
 }

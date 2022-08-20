@@ -81,7 +81,7 @@
             this.ribbonPageSettings});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemDateEdit1});
-            this.ribbon.Size = new System.Drawing.Size(1186, 181);
+            this.ribbon.Size = new System.Drawing.Size(1186, 182);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btnSoftware
@@ -93,7 +93,7 @@
             this.btnSoftware.ItemAppearance.Disabled.Options.UseFont = true;
             this.btnSoftware.ItemAppearance.Hovered.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.btnSoftware.ItemAppearance.Hovered.Options.UseFont = true;
-            this.btnSoftware.ItemAppearance.Normal.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSoftware.ItemAppearance.Normal.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSoftware.ItemAppearance.Normal.Options.UseFont = true;
             this.btnSoftware.ItemAppearance.Pressed.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.btnSoftware.ItemAppearance.Pressed.Options.UseFont = true;
@@ -232,10 +232,10 @@
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
             this.navBarGroup1});
-            this.navBarControl1.Location = new System.Drawing.Point(0, 181);
+            this.navBarControl1.Location = new System.Drawing.Point(0, 182);
             this.navBarControl1.Name = "navBarControl1";
             this.navBarControl1.OptionsNavPane.ExpandedWidth = 274;
-            this.navBarControl1.Size = new System.Drawing.Size(274, 469);
+            this.navBarControl1.Size = new System.Drawing.Size(274, 468);
             this.navBarControl1.TabIndex = 2;
             this.navBarControl1.Text = "navBarControl1";
             // 
@@ -249,7 +249,9 @@
             // 
             this.mdiManager.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mdiManager.Appearance.Options.UseFont = true;
+            this.mdiManager.AppearancePage.HeaderActive.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(190)))), ((int)(((byte)(221)))));
             this.mdiManager.AppearancePage.HeaderActive.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mdiManager.AppearancePage.HeaderActive.Options.UseBorderColor = true;
             this.mdiManager.AppearancePage.HeaderActive.Options.UseFont = true;
             this.mdiManager.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeader;
             this.mdiManager.MdiParent = this;

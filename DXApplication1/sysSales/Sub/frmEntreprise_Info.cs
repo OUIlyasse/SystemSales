@@ -54,26 +54,6 @@ namespace sysSales.Sub
         public frmEntreprise_Info()
         {
             InitializeComponent();
-            txtCode.Text = getMaxID();
-        }
-
-        private void frmEntreprise_Info_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtName_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

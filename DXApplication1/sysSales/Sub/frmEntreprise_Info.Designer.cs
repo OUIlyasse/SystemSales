@@ -28,478 +28,677 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule4 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule5 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            this.vp = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
-            this.txtA1 = new DevExpress.XtraEditors.MemoEdit();
-            this.txtFi1 = new DevExpress.XtraEditors.TextEdit();
-            this.txtM1 = new DevExpress.XtraEditors.TextEdit();
-            this.txtCode = new DevExpress.XtraEditors.TextEdit();
-            this.txtNote = new DevExpress.XtraEditors.MemoEdit();
-            this.txtA2 = new DevExpress.XtraEditors.MemoEdit();
-            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
-            this.txtFa2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtFa1 = new DevExpress.XtraEditors.TextEdit();
-            this.txtFi3 = new DevExpress.XtraEditors.TextEdit();
-            this.txtFi2 = new DevExpress.XtraEditors.TextEdit();
             this.txtM3 = new DevExpress.XtraEditors.TextEdit();
             this.txtM2 = new DevExpress.XtraEditors.TextEdit();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.vp)).BeginInit();
+            this.txtM1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFi1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFa1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtA1 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtNote = new DevExpress.XtraEditors.MemoEdit();
+            this.txtFi2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtA2 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtFi3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFa2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCode = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.vp = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtA1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFi1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtM1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtA2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFa2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFa1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFi3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFi2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtM3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtM2.Properties)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtM1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFi1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFa1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFi2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFi3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFa2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vp)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.layoutControl1);
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1240, 532);
+            this.panel2.TabIndex = 2;
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Controls.Add(this.pictureBox1);
+            this.layoutControl1.Controls.Add(this.txtName);
+            this.layoutControl1.Controls.Add(this.txtM3);
+            this.layoutControl1.Controls.Add(this.txtM2);
+            this.layoutControl1.Controls.Add(this.txtM1);
+            this.layoutControl1.Controls.Add(this.txtFi1);
+            this.layoutControl1.Controls.Add(this.txtFa1);
+            this.layoutControl1.Controls.Add(this.txtEmail);
+            this.layoutControl1.Controls.Add(this.txtA1);
+            this.layoutControl1.Controls.Add(this.txtNote);
+            this.layoutControl1.Controls.Add(this.txtFi2);
+            this.layoutControl1.Controls.Add(this.txtA2);
+            this.layoutControl1.Controls.Add(this.txtFi3);
+            this.layoutControl1.Controls.Add(this.txtFa2);
+            this.layoutControl1.Controls.Add(this.txtCode);
+            this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(77, 208, 812, 500);
+            this.layoutControl1.Root = this.layoutControlGroup1;
+            this.layoutControl1.Size = new System.Drawing.Size(1240, 532);
+            this.layoutControl1.TabIndex = 0;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(965, 192);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(263, 328);
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(528, 23);
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtName.Location = new System.Drawing.Point(612, 12);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Properties.Appearance.Options.UseFont = true;
-            this.txtName.Size = new System.Drawing.Size(678, 24);
+            this.txtName.Size = new System.Drawing.Size(616, 24);
+            this.txtName.StyleController = this.layoutControl1;
             this.txtName.TabIndex = 0;
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This field is blank, please fill it in";
+            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.vp.SetValidationRule(this.txtName, conditionValidationRule1);
+            // 
+            // txtM3
+            // 
+            this.txtM3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtM3.Location = new System.Drawing.Point(951, 50);
+            this.txtM3.Name = "txtM3";
+            this.txtM3.Properties.Appearance.Options.UseFont = true;
+            this.txtM3.Properties.Mask.BeepOnError = true;
+            this.txtM3.Properties.Mask.EditMask = "\\d\\d-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
+            this.txtM3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtM3.Size = new System.Drawing.Size(277, 24);
+            this.txtM3.StyleController = this.layoutControl1;
+            this.txtM3.TabIndex = 3;
+            // 
+            // txtM2
+            // 
+            this.txtM2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtM2.Location = new System.Drawing.Point(612, 50);
+            this.txtM2.Name = "txtM2";
+            this.txtM2.Properties.Appearance.Options.UseFont = true;
+            this.txtM2.Properties.Mask.BeepOnError = true;
+            this.txtM2.Properties.Mask.EditMask = "\\d\\d-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
+            this.txtM2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtM2.Size = new System.Drawing.Size(242, 24);
+            this.txtM2.StyleController = this.layoutControl1;
+            this.txtM2.TabIndex = 2;
+            // 
+            // txtM1
+            // 
+            this.txtM1.Location = new System.Drawing.Point(105, 50);
+            this.txtM1.Name = "txtM1";
+            this.txtM1.Properties.Appearance.Options.UseFont = true;
+            this.txtM1.Properties.Mask.BeepOnError = true;
+            this.txtM1.Properties.Mask.EditMask = "\\d\\d-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
+            this.txtM1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtM1.Size = new System.Drawing.Size(410, 24);
+            this.txtM1.StyleController = this.layoutControl1;
+            this.txtM1.TabIndex = 1;
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule2.ErrorText = "This field is blank, please fill it in";
+            conditionValidationRule2.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
+            this.vp.SetValidationRule(this.txtM1, conditionValidationRule2);
+            // 
+            // txtFi1
+            // 
+            this.txtFi1.Location = new System.Drawing.Point(105, 88);
+            this.txtFi1.Name = "txtFi1";
+            this.txtFi1.Properties.Appearance.Options.UseFont = true;
+            this.txtFi1.Properties.Mask.BeepOnError = true;
+            this.txtFi1.Properties.Mask.EditMask = "05\\d\\d\\d\\d\\d\\d\\d\\d";
+            this.txtFi1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtFi1.Size = new System.Drawing.Size(410, 24);
+            this.txtFi1.StyleController = this.layoutControl1;
+            this.txtFi1.TabIndex = 4;
             conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule3.ErrorText = "This field is blank, please fill it in";
             conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.vp.SetValidationRule(this.txtName, conditionValidationRule3);
-            this.txtName.EditValueChanged += new System.EventHandler(this.txtName_EditValueChanged);
+            this.vp.SetValidationRule(this.txtFi1, conditionValidationRule3);
+            // 
+            // txtFa1
+            // 
+            this.txtFa1.Location = new System.Drawing.Point(105, 126);
+            this.txtFa1.Name = "txtFa1";
+            this.txtFa1.Properties.Appearance.Options.UseFont = true;
+            this.txtFa1.Size = new System.Drawing.Size(508, 24);
+            this.txtFa1.StyleController = this.layoutControl1;
+            this.txtFa1.TabIndex = 7;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(105, 164);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Appearance.Options.UseFont = true;
+            this.txtEmail.Properties.Mask.EditMask = "\\w+([-_.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            this.txtEmail.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtEmail.Size = new System.Drawing.Size(1123, 24);
+            this.txtEmail.StyleController = this.layoutControl1;
+            this.txtEmail.TabIndex = 9;
             // 
             // txtA1
             // 
-            this.txtA1.Location = new System.Drawing.Point(131, 333);
+            this.txtA1.Location = new System.Drawing.Point(105, 202);
             this.txtA1.Name = "txtA1";
-            this.txtA1.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.txtA1.Properties.Appearance.Options.UseFont = true;
-            this.txtA1.Size = new System.Drawing.Size(359, 79);
+            this.txtA1.Size = new System.Drawing.Size(363, 146);
+            this.txtA1.StyleController = this.layoutControl1;
             this.txtA1.TabIndex = 10;
             conditionValidationRule4.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule4.ErrorText = "This field is blank, please fill it in";
             conditionValidationRule4.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
             this.vp.SetValidationRule(this.txtA1, conditionValidationRule4);
             // 
-            // txtFi1
-            // 
-            this.txtFi1.Location = new System.Drawing.Point(131, 147);
-            this.txtFi1.Name = "txtFi1";
-            this.txtFi1.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
-            this.txtFi1.Properties.Appearance.Options.UseFont = true;
-            this.txtFi1.Properties.Mask.BeepOnError = true;
-            this.txtFi1.Properties.Mask.EditMask = "05\\d\\d\\d\\d\\d\\d\\d\\d";
-            this.txtFi1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtFi1.Size = new System.Drawing.Size(269, 24);
-            this.txtFi1.TabIndex = 4;
-            conditionValidationRule5.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule5.ErrorText = "This field is blank, please fill it in";
-            conditionValidationRule5.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.vp.SetValidationRule(this.txtFi1, conditionValidationRule5);
-            // 
-            // txtM1
-            // 
-            this.txtM1.Location = new System.Drawing.Point(131, 85);
-            this.txtM1.Name = "txtM1";
-            this.txtM1.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
-            this.txtM1.Properties.Appearance.Options.UseFont = true;
-            this.txtM1.Properties.Mask.BeepOnError = true;
-            this.txtM1.Properties.Mask.EditMask = "\\d\\d-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
-            this.txtM1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtM1.Size = new System.Drawing.Size(269, 24);
-            this.txtM1.TabIndex = 1;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This field is blank, please fill it in";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.vp.SetValidationRule(this.txtM1, conditionValidationRule1);
-            // 
-            // txtCode
-            // 
-            this.txtCode.Location = new System.Drawing.Point(131, 23);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.Properties.Appearance.Options.UseFont = true;
-            this.txtCode.Properties.ReadOnly = true;
-            this.txtCode.Size = new System.Drawing.Size(298, 24);
-            this.txtCode.TabIndex = 2;
-            // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(131, 450);
+            this.txtNote.Location = new System.Drawing.Point(105, 375);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.txtNote.Properties.Appearance.Options.UseFont = true;
-            this.txtNote.Size = new System.Drawing.Size(880, 79);
+            this.txtNote.Size = new System.Drawing.Size(815, 145);
+            this.txtNote.StyleController = this.layoutControl1;
             this.txtNote.TabIndex = 12;
+            // 
+            // txtFi2
+            // 
+            this.txtFi2.Location = new System.Drawing.Point(612, 88);
+            this.txtFi2.Name = "txtFi2";
+            this.txtFi2.Properties.Appearance.Options.UseFont = true;
+            this.txtFi2.Properties.Mask.BeepOnError = true;
+            this.txtFi2.Properties.Mask.EditMask = "05\\d\\d\\d\\d\\d\\d\\d\\d";
+            this.txtFi2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtFi2.Size = new System.Drawing.Size(242, 24);
+            this.txtFi2.StyleController = this.layoutControl1;
+            this.txtFi2.TabIndex = 5;
             // 
             // txtA2
             // 
-            this.txtA2.Location = new System.Drawing.Point(652, 333);
+            this.txtA2.Location = new System.Drawing.Point(565, 202);
             this.txtA2.Name = "txtA2";
-            this.txtA2.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
             this.txtA2.Properties.Appearance.Options.UseFont = true;
-            this.txtA2.Size = new System.Drawing.Size(359, 79);
+            this.txtA2.Size = new System.Drawing.Size(355, 146);
+            this.txtA2.StyleController = this.layoutControl1;
             this.txtA2.TabIndex = 11;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(131, 271);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
-            this.txtEmail.Properties.Appearance.Options.UseFont = true;
-            this.txtEmail.Size = new System.Drawing.Size(880, 24);
-            this.txtEmail.TabIndex = 9;
-            // 
-            // txtFa2
-            // 
-            this.txtFa2.Location = new System.Drawing.Point(734, 209);
-            this.txtFa2.Name = "txtFa2";
-            this.txtFa2.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
-            this.txtFa2.Properties.Appearance.Options.UseFont = true;
-            this.txtFa2.Size = new System.Drawing.Size(472, 24);
-            this.txtFa2.TabIndex = 8;
-            // 
-            // txtFa1
-            // 
-            this.txtFa1.Location = new System.Drawing.Point(131, 209);
-            this.txtFa1.Name = "txtFa1";
-            this.txtFa1.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
-            this.txtFa1.Properties.Appearance.Options.UseFont = true;
-            this.txtFa1.Size = new System.Drawing.Size(472, 24);
-            this.txtFa1.TabIndex = 7;
             // 
             // txtFi3
             // 
-            this.txtFi3.Location = new System.Drawing.Point(937, 147);
+            this.txtFi3.Location = new System.Drawing.Point(951, 88);
             this.txtFi3.Name = "txtFi3";
             this.txtFi3.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFi3.Properties.Appearance.Options.UseFont = true;
             this.txtFi3.Properties.Mask.BeepOnError = true;
             this.txtFi3.Properties.Mask.EditMask = "05\\d\\d\\d\\d\\d\\d\\d\\d";
             this.txtFi3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtFi3.Size = new System.Drawing.Size(269, 24);
+            this.txtFi3.Size = new System.Drawing.Size(277, 24);
+            this.txtFi3.StyleController = this.layoutControl1;
             this.txtFi3.TabIndex = 6;
             // 
-            // txtFi2
+            // txtFa2
             // 
-            this.txtFi2.Location = new System.Drawing.Point(535, 147);
-            this.txtFi2.Name = "txtFi2";
-            this.txtFi2.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
-            this.txtFi2.Properties.Appearance.Options.UseFont = true;
-            this.txtFi2.Properties.Mask.BeepOnError = true;
-            this.txtFi2.Properties.Mask.EditMask = "05\\d\\d\\d\\d\\d\\d\\d\\d";
-            this.txtFi2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtFi2.Size = new System.Drawing.Size(269, 24);
-            this.txtFi2.TabIndex = 5;
+            this.txtFa2.Location = new System.Drawing.Point(710, 126);
+            this.txtFa2.Name = "txtFa2";
+            this.txtFa2.Properties.Appearance.Options.UseFont = true;
+            this.txtFa2.Size = new System.Drawing.Size(518, 24);
+            this.txtFa2.StyleController = this.layoutControl1;
+            this.txtFa2.TabIndex = 8;
             // 
-            // txtM3
+            // txtCode
             // 
-            this.txtM3.Location = new System.Drawing.Point(937, 85);
-            this.txtM3.Name = "txtM3";
-            this.txtM3.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
-            this.txtM3.Properties.Appearance.Options.UseFont = true;
-            this.txtM3.Properties.Mask.BeepOnError = true;
-            this.txtM3.Properties.Mask.EditMask = "\\d\\d-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
-            this.txtM3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtM3.Size = new System.Drawing.Size(269, 24);
-            this.txtM3.TabIndex = 3;
+            this.txtCode.Location = new System.Drawing.Point(105, 12);
+            this.txtCode.Name = "txtCode";
+            this.txtCode.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtCode.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCode.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCode.Properties.Appearance.Options.UseFont = true;
+            this.txtCode.Properties.ReadOnly = true;
+            this.txtCode.Size = new System.Drawing.Size(410, 24);
+            this.txtCode.StyleController = this.layoutControl1;
+            this.txtCode.TabIndex = 4;
             // 
-            // txtM2
+            // layoutControlGroup1
             // 
-            this.txtM2.Location = new System.Drawing.Point(535, 85);
-            this.txtM2.Name = "txtM2";
-            this.txtM2.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F);
-            this.txtM2.Properties.Appearance.Options.UseFont = true;
-            this.txtM2.Properties.Mask.BeepOnError = true;
-            this.txtM2.Properties.Mask.EditMask = "\\d\\d-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
-            this.txtM2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtM2.Size = new System.Drawing.Size(269, 24);
-            this.txtM2.TabIndex = 2;
+            this.layoutControlGroup1.AppearanceGroup.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlGroup1.AppearanceGroup.Options.UseFont = true;
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.layoutControlItem8,
+            this.layoutControlItem9,
+            this.layoutControlItem10,
+            this.layoutControlItem2,
+            this.layoutControlItem5,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem13,
+            this.layoutControlItem11,
+            this.layoutControlItem14,
+            this.layoutControlItem12,
+            this.emptySpaceItem1,
+            this.emptySpaceItem2,
+            this.emptySpaceItem3,
+            this.emptySpaceItem4,
+            this.emptySpaceItem5,
+            this.emptySpaceItem6,
+            this.emptySpaceItem7,
+            this.layoutControlItem15});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(1240, 532);
+            this.layoutControlGroup1.TextVisible = false;
             // 
-            // panel1
+            // layoutControlItem1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtCode);
-            this.panel1.Controls.Add(this.txtName);
-            this.panel1.Controls.Add(this.txtM3);
-            this.panel1.Controls.Add(this.txtM2);
-            this.panel1.Controls.Add(this.txtM1);
-            this.panel1.Controls.Add(this.txtFi1);
-            this.panel1.Controls.Add(this.txtFa1);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.txtA1);
-            this.panel1.Controls.Add(this.txtNote);
-            this.panel1.Controls.Add(this.txtFi2);
-            this.panel1.Controls.Add(this.txtA2);
-            this.panel1.Controls.Add(this.txtFi3);
-            this.panel1.Controls.Add(this.txtFa2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1240, 539);
-            this.panel1.TabIndex = 1;
+            this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem1.Control = this.txtCode;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(507, 28);
+            this.layoutControlItem1.Text = "Code";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label14
+            // layoutControlItem6
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(22, 481);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 17);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Note";
+            this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem6.Control = this.txtFi1;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 76);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(507, 28);
+            this.layoutControlItem6.Text = "Fixe 1";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label13
+            // layoutControlItem7
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(543, 364);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(103, 17);
-            this.label13.TabIndex = 25;
-            this.label13.Text = "Address n°2";
+            this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem7.Control = this.txtFa1;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 114);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(605, 28);
+            this.layoutControlItem7.Text = "Fax 1";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label12
+            // layoutControlItem8
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(22, 364);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 17);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Address n°1";
+            this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem8.Control = this.txtEmail;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 152);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(1220, 28);
+            this.layoutControlItem8.Text = "E-mail";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label11
+            // layoutControlItem9
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(22, 275);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 17);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "E_mail";
+            this.layoutControlItem9.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem9.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem9.Control = this.txtA1;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 190);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(460, 150);
+            this.layoutControlItem9.Text = "Address 1";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label10
+            // layoutControlItem10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(650, 212);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 17);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Fax n°2";
+            this.layoutControlItem10.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem10.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem10.Control = this.txtNote;
+            this.layoutControlItem10.Location = new System.Drawing.Point(0, 363);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(912, 149);
+            this.layoutControlItem10.Text = "Note";
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label9
+            // layoutControlItem2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(22, 213);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 17);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Fax n°1";
+            this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem2.Control = this.txtName;
+            this.layoutControlItem2.Location = new System.Drawing.Point(507, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(713, 28);
+            this.layoutControlItem2.Text = "Name";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label8
+            // layoutControlItem5
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(843, 151);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 17);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Fixe n°3";
+            this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem5.Control = this.txtM1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 38);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(507, 28);
+            this.layoutControlItem5.Text = "Mobile 1";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label7
+            // layoutControlItem3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(441, 151);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 17);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Fixe n°2";
+            this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem3.Control = this.txtM3;
+            this.layoutControlItem3.Location = new System.Drawing.Point(846, 38);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(374, 28);
+            this.layoutControlItem3.Text = "Mobile 3";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label6
+            // layoutControlItem4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 151);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 17);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Fixe n°1";
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.Control = this.txtM2;
+            this.layoutControlItem4.Location = new System.Drawing.Point(507, 38);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(339, 28);
+            this.layoutControlItem4.Text = "Mobile 2";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label5
+            // layoutControlItem13
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(838, 89);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 17);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Mobile n°3";
+            this.layoutControlItem13.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem13.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem13.Control = this.txtFi3;
+            this.layoutControlItem13.Location = new System.Drawing.Point(846, 76);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(374, 28);
+            this.layoutControlItem13.Text = "Fixe 3";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label4
+            // layoutControlItem11
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(437, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Mobile n°2";
+            this.layoutControlItem11.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem11.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem11.Control = this.txtFi2;
+            this.layoutControlItem11.Location = new System.Drawing.Point(507, 76);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(339, 28);
+            this.layoutControlItem11.Text = "Fixe 2";
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label3
+            // layoutControlItem14
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Mobile n°1";
+            this.layoutControlItem14.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem14.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem14.Control = this.txtFa2;
+            this.layoutControlItem14.Location = new System.Drawing.Point(605, 114);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(615, 28);
+            this.layoutControlItem14.Text = "Fax 2";
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label2
+            // layoutControlItem12
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(465, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 17);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.layoutControlItem12.AppearanceItemCaption.Font = new System.Drawing.Font("Lucida Sans", 10.2F, System.Drawing.FontStyle.Bold);
+            this.layoutControlItem12.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem12.Control = this.txtA2;
+            this.layoutControlItem12.Location = new System.Drawing.Point(460, 190);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(452, 150);
+            this.layoutControlItem12.Text = "Address 2";
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(90, 20);
             // 
-            // label1
+            // emptySpaceItem1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Code";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 28);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(1220, 10);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // pictureBox1
+            // emptySpaceItem2
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(1026, 245);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 223);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 66);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(1220, 10);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem2";
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 104);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(1220, 10);
+            this.emptySpaceItem3.Text = "emptySpaceItem2";
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem2";
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 142);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(1220, 10);
+            this.emptySpaceItem4.Text = "emptySpaceItem2";
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.CustomizationFormText = "emptySpaceItem2";
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 180);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(912, 10);
+            this.emptySpaceItem5.Text = "emptySpaceItem2";
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem6
+            // 
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.CustomizationFormText = "emptySpaceItem2";
+            this.emptySpaceItem6.Location = new System.Drawing.Point(0, 340);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(912, 23);
+            this.emptySpaceItem6.Text = "emptySpaceItem2";
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.CustomizationFormText = "emptySpaceItem2";
+            this.emptySpaceItem7.Location = new System.Drawing.Point(912, 180);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(41, 332);
+            this.emptySpaceItem7.Text = "emptySpaceItem2";
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem15
+            // 
+            this.layoutControlItem15.Control = this.pictureBox1;
+            this.layoutControlItem15.Location = new System.Drawing.Point(953, 180);
+            this.layoutControlItem15.Name = "layoutControlItem15";
+            this.layoutControlItem15.Size = new System.Drawing.Size(267, 332);
+            this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem15.TextVisible = false;
             // 
             // frmEntreprise_Info
             // 
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(214)))), ((int)(((byte)(229)))));
+            this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 650);
-            this.Controls.Add(this.panel1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Controls.Add(this.panel2);
             this.Name = "frmEntreprise_Info";
-            this.Text = "Information";
-            this.Load += new System.EventHandler(this.frmEntreprise_Info_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.vp)).EndInit();
+            this.Text = "Company Information";
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtA1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFi1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtM1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtA2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFa2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFa1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFi3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFi2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtM3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtM2.Properties)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtM1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFi1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFa1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFi2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFi3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFa2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vp)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider vp;
-        private DevExpress.XtraEditors.MemoEdit txtNote;
-        private DevExpress.XtraEditors.MemoEdit txtA2;
-        private DevExpress.XtraEditors.MemoEdit txtA1;
-        private DevExpress.XtraEditors.TextEdit txtEmail;
-        private DevExpress.XtraEditors.TextEdit txtFa2;
-        private DevExpress.XtraEditors.TextEdit txtFa1;
-        private DevExpress.XtraEditors.TextEdit txtFi3;
-        private DevExpress.XtraEditors.TextEdit txtFi2;
-        private DevExpress.XtraEditors.TextEdit txtFi1;
+        private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraEditors.TextEdit txtCode;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraEditors.TextEdit txtName;
         private DevExpress.XtraEditors.TextEdit txtM3;
         private DevExpress.XtraEditors.TextEdit txtM2;
         private DevExpress.XtraEditors.TextEdit txtM1;
-        private DevExpress.XtraEditors.TextEdit txtName;
-        private DevExpress.XtraEditors.TextEdit txtCode;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.TextEdit txtFi1;
+        private DevExpress.XtraEditors.TextEdit txtFa1;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
+        private DevExpress.XtraEditors.MemoEdit txtA1;
+        private DevExpress.XtraEditors.MemoEdit txtNote;
+        private DevExpress.XtraEditors.TextEdit txtFi2;
+        private DevExpress.XtraEditors.MemoEdit txtA2;
+        private DevExpress.XtraEditors.TextEdit txtFi3;
+        private DevExpress.XtraEditors.TextEdit txtFa2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
+        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider vp;
     }
 }
