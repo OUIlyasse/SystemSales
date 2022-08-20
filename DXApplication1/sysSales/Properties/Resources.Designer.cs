@@ -73,6 +73,16 @@ namespace sysSales.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap New_File_64 {
+            get {
+                object obj = ResourceManager.GetObject("New_File_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Plus_64 {
             get {
                 object obj = ResourceManager.GetObject("Plus_64", resourceCulture);

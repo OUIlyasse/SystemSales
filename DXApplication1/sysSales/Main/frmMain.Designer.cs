@@ -304,9 +304,9 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
         private DevExpress.XtraNavBar.NavBarControl navBarControl1;
         private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
-        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager mdiManager;
         private System.Windows.Forms.Timer timerTimes;
         public DevExpress.XtraBars.BarStaticItem txtStatus;
         public DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar;
+        public DevExpress.XtraTabbedMdi.XtraTabbedMdiManager mdiManager;
     }
 }
