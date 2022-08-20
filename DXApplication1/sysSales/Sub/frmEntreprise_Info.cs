@@ -1,7 +1,8 @@
 ﻿using SalesDB.DB;
+using SalesDB.Proc_DB;
 using sysSales.IForms;
 using System;
-using System.Xml.Linq;
+using System.Linq;
 
 namespace sysSales.Sub
 {
@@ -9,7 +10,9 @@ namespace sysSales.Sub
     {
         #region Varibales
         private SystemSalesEntities db = new SystemSalesEntities();
+        private CRUD<Entreprise_Info> en = new CRUD<Entreprise_Info>();
         private Entreprise_Info ent;
+
         #endregion Varibales
 
         #region myCodes
@@ -19,8 +22,8 @@ namespace sysSales.Sub
         }
         private string getMaxID()
         {
-            var result = db.MaxID_Entreprise_Info();
-            return result.ToString();
+            var max = db.Entreprise_Info.Any() ? db.Entreprise_Info.Max(x => x.entr_ID) + 1 : 1;
+            return max.ToString();
         }
         #endregion myCodes
 
@@ -56,6 +59,21 @@ namespace sysSales.Sub
 
         private void frmEntreprise_Info_Load(object sender, EventArgs e)
         {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtName_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

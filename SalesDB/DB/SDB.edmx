@@ -6325,8 +6325,11 @@
             <End Role="Unite_Mesure" EntitySet="Unite_Mesure" />
             <End Role="Unite_Type" EntitySet="Unite_Type" />
           </AssociationSet>
-          <FunctionImport Name="MaxID_Entreprise_Info" EntitySet="Entreprise_Info" ReturnType="Collection(SystemSalesModel.Entreprise_Info)" />
+          <FunctionImport Name="MaxID_Entreprise_Info" />
         </EntityContainer>
+        <ComplexType Name="MaxID_Entreprise_Info_Result">
+          <Property Type="Decimal" Name="Column1" Nullable="false" Precision="19" Scale="0" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -7449,7 +7452,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="MaxID_Entreprise_Info" FunctionName="SystemSalesModel.Store.MaxID_Entreprise_Info" />
+          <FunctionImportMapping FunctionImportName="MaxID_Entreprise_Info" FunctionName="SystemSalesModel.Store.MaxID_Entreprise_Info" >
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

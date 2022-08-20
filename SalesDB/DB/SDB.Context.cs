@@ -95,14 +95,9 @@ namespace SalesDB.DB
         public virtual DbSet<Unite_Mesure> Unite_Mesure { get; set; }
         public virtual DbSet<Unite_Type> Unite_Type { get; set; }
     
-        public virtual ObjectResult<Entreprise_Info> MaxID_Entreprise_Info()
+        public virtual int MaxID_Entreprise_Info()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Entreprise_Info>("MaxID_Entreprise_Info");
-        }
-    
-        public virtual ObjectResult<Entreprise_Info> MaxID_Entreprise_Info(MergeOption mergeOption)
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Entreprise_Info>("MaxID_Entreprise_Info", mergeOption);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("MaxID_Entreprise_Info");
         }
     }
 }

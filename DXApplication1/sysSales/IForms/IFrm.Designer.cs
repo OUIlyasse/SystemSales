@@ -43,10 +43,10 @@
             this.groupControl1.Controls.Add(this.btnDelete);
             this.groupControl1.Controls.Add(this.btnUpdate);
             this.groupControl1.Controls.Add(this.btnAdd);
-            this.groupControl1.Location = new System.Drawing.Point(280, 421);
+            this.groupControl1.Location = new System.Drawing.Point(363, 557);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
-            this.groupControl1.Size = new System.Drawing.Size(458, 118);
+            this.groupControl1.Size = new System.Drawing.Size(539, 81);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
             // 
@@ -59,7 +59,7 @@
             this.btnDelete.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.ImageOptions.Image = global::sysSales.Properties.Resources.Recycle_Bin_Full_64;
-            this.btnDelete.Location = new System.Drawing.Point(333, 23);
+            this.btnDelete.Location = new System.Drawing.Point(373, 4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(72, 70);
             this.btnDelete.TabIndex = 2;
@@ -75,7 +75,7 @@
             this.btnUpdate.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.ImageOptions.Image = global::sysSales.Properties.Resources.Edit_64;
-            this.btnUpdate.Location = new System.Drawing.Point(193, 25);
+            this.btnUpdate.Location = new System.Drawing.Point(233, 6);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(72, 70);
             this.btnUpdate.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.btnAdd.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.ImageOptions.Image = global::sysSales.Properties.Resources.Plus_64;
-            this.btnAdd.Location = new System.Drawing.Point(53, 25);
+            this.btnAdd.Location = new System.Drawing.Point(93, 6);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(72, 70);
             this.btnAdd.TabIndex = 0;
@@ -103,7 +103,7 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 551);
+            this.ClientSize = new System.Drawing.Size(1264, 650);
             this.Controls.Add(this.groupControl1);
             this.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

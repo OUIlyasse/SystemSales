@@ -176,6 +176,9 @@
     <Compile Include="DB\Main_Caisse.cs">
       <DependentUpon>SDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\MaxID_Entreprise_Info_Result.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Operation_Bon_Entree_Magasin.cs">
       <DependentUpon>SDB.tt</DependentUpon>
     </Compile>
