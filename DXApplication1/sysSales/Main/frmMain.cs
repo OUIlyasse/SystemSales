@@ -21,6 +21,10 @@ namespace sysSales.Main
             ShowDate();
             ShowTime();
         }
+        public frmMain(string message)
+        {
+            txtStatus.Caption = message;
+        }
         private void btnSoftware_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmEntreprise_Info f = new frmEntreprise_Info();
