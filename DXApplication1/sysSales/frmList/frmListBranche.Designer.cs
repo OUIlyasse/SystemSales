@@ -28,26 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.gcBranche = new DevExpress.XtraGrid.GridControl();
+            this.gvBranche = new DevExpress.XtraGrid.Views.Grid.GridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gcBranche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBranche)).BeginInit();
             this.SuspendLayout();
             // 
-            // gridControl1
+            // gcBranche
             // 
-            this.gridControl1.Location = new System.Drawing.Point(12, 88);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1240, 550);
-            this.gridControl1.TabIndex = 1;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gcBranche.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gcBranche.Location = new System.Drawing.Point(12, 88);
+            this.gcBranche.MainView = this.gvBranche;
+            this.gcBranche.Name = "gcBranche";
+            this.gcBranche.Size = new System.Drawing.Size(1240, 550);
+            this.gcBranche.TabIndex = 1;
+            this.gcBranche.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvBranche});
             // 
-            // gridView1
+            // gvBranche
             // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
+            this.gvBranche.GridControl = this.gcBranche;
+            this.gvBranche.Name = "gvBranche";
+            this.gvBranche.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvBranche.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gvBranche.OptionsBehavior.ReadOnly = true;
+            this.gvBranche.OptionsFind.AlwaysVisible = true;
+            this.gvBranche.OptionsFind.ShowClearButton = false;
+            this.gvBranche.OptionsFind.ShowCloseButton = false;
+            this.gvBranche.OptionsFind.ShowFindButton = false;
+            this.gvBranche.OptionsView.ShowFooter = true;
             // 
             // FrmListBranche
             // 
@@ -56,12 +67,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 650);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gcBranche);
             this.Name = "FrmListBranche";
             this.Text = "frmListBranche";
-            this.Controls.SetChildIndex(this.gridControl1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.Controls.SetChildIndex(this.gcBranche, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.gcBranche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvBranche)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,7 +80,7 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gcBranche;
+        private DevExpress.XtraGrid.Views.Grid.GridView gvBranche;
     }
 }

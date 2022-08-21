@@ -99,5 +99,15 @@ namespace SalesDB.DB
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("MaxID_Entreprise_Info");
         }
+    
+        public virtual ObjectResult<Select_Branche_Result> Select_Branche()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Select_Branche_Result>("Select_Branche");
+        }
+    
+        public virtual ObjectResult<Select_Entreprise_Info_Result> Select_Entreprise_Info()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Select_Entreprise_Info_Result>("Select_Entreprise_Info");
+        }
     }
 }

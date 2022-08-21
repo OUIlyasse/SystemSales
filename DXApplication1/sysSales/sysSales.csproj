@@ -124,6 +124,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sub\frmBranche.resx">
+      <DependentUpon>frmBranche.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sub\frmEntreprise_Info.resx">
       <DependentUpon>frmEntreprise_Info.cs</DependentUpon>
     </EmbeddedResource>

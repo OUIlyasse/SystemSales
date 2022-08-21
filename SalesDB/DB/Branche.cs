@@ -33,12 +33,12 @@ namespace SalesDB.DB
         public string barn_Code { get; set; }
         public string barn_Nom { get; set; }
         public string barn_Adresse { get; set; }
-        public string barn_Tele { get; set; }
         public string barn_Mobile { get; set; }
-        public string barn_Adresse_Auxi { get; set; }
         public Nullable<System.DateTime> barn_Date_Creation { get; set; }
         public Nullable<int> barn_Status { get; set; }
         public Nullable<decimal> entr_ID { get; set; }
+        public string barn_Note { get; set; }
+        public string barn_Fixe { get; set; }
     
         public virtual Entreprise_Info Entreprise_Info { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

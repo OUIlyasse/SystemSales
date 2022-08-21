@@ -13,7 +13,7 @@
         <EntityTypeShape EntityType="SystemSalesModel.Bon_Sortie" Width="1.5" PointX="3" PointY="23.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SystemSalesModel.Bon_Sortie_Produit" Width="1.5" PointX="5.25" PointY="32.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SystemSalesModel.Bon_Type" Width="1.5" PointX="0.75" PointY="17.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="SystemSalesModel.Branche" Width="1.5" PointX="0.75" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SystemSalesModel.Branche" Width="1.5" PointX="0.5" PointY="56.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SystemSalesModel.Charge" Width="1.5" PointX="11" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SystemSalesModel.Charge_Type" Width="1.5" PointX="8.75" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SystemSalesModel.Client" Width="1.5" PointX="1.5" PointY="12.375" IsExpanded="true" />

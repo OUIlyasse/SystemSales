@@ -122,12 +122,12 @@
           <Property Name="barn_ID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
           <Property Name="barn_Code" Type="nvarchar" MaxLength="100" />
           <Property Name="barn_Nom" Type="nvarchar" MaxLength="50" />
+          <Property Name="barn_Mobile" Type="nvarchar(max)" />
+          <Property Name="barn_Fixe" Type="nvarchar(max)" />
           <Property Name="barn_Adresse" Type="nvarchar(max)" />
-          <Property Name="barn_Tele" Type="nchar" MaxLength="10" />
-          <Property Name="barn_Mobile" Type="nchar" MaxLength="10" />
-          <Property Name="barn_Adresse_Auxi" Type="nvarchar(max)" />
           <Property Name="barn_Date_Creation" Type="date" />
           <Property Name="barn_Status" Type="int" />
+          <Property Name="barn_Note" Type="nvarchar(max)" />
           <Property Name="entr_ID" Type="numeric" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="Charge">
@@ -2495,6 +2495,8 @@
           </ReferentialConstraint>
         </Association>
         <Function Name="MaxID_Entreprise_Info" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Branche" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="Select_Entreprise_Info" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="SystemSalesModelStoreContainer">
           <EntitySet Name="Banque" EntityType="Self.Banque" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Bon_Destruction" EntityType="Self.Bon_Destruction" Schema="dbo" store:Type="Tables" />
@@ -3188,9 +3190,7 @@
           <Property Name="barn_Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="barn_Nom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="barn_Adresse" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="barn_Tele" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="barn_Mobile" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="barn_Adresse_Auxi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="barn_Mobile" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="barn_Date_Creation" Type="DateTime" Precision="0" />
           <Property Name="barn_Status" Type="Int32" />
           <Property Name="entr_ID" Type="Decimal" Precision="18" Scale="0" />
@@ -3205,6 +3205,8 @@
           <NavigationProperty Name="Operation_Facture_Vente_Retour" Relationship="Self.FK_Operation_Facture_Vente_Retour_Branche" FromRole="Branche" ToRole="Operation_Facture_Vente_Retour" />
           <NavigationProperty Name="Operation_Recu_Achat" Relationship="Self.FK_Operation_Recu_Achat_Branche" FromRole="Branche" ToRole="Operation_Recu_Achat" />
           <NavigationProperty Name="Operation_Recu_Vente" Relationship="Self.FK_Operation_Recu_Vente_Branche" FromRole="Branche" ToRole="Operation_Recu_Vente" />
+          <Property Name="barn_Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="barn_Fixe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Charge">
           <Key>
@@ -6326,9 +6328,36 @@
             <End Role="Unite_Type" EntitySet="Unite_Type" />
           </AssociationSet>
           <FunctionImport Name="MaxID_Entreprise_Info" />
+          <FunctionImport Name="Select_Branche" ReturnType="Collection(SystemSalesModel.Select_Branche_Result)" />
+          <FunctionImport Name="Select_Entreprise_Info" ReturnType="Collection(SystemSalesModel.Select_Entreprise_Info_Result)" />
         </EntityContainer>
         <ComplexType Name="MaxID_Entreprise_Info_Result">
           <Property Type="Decimal" Name="Column1" Nullable="false" Precision="19" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="Select_Branche_Result">
+          <Property Type="Decimal" Name="barn_ID" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="barn_Code" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="barn_Nom" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="barn_Mobile" Nullable="true" />
+          <Property Type="String" Name="barn_Fix" Nullable="true" />
+          <Property Type="String" Name="barn_Adresse" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Select_Entreprise_Info_Result">
+          <Property Type="Decimal" Name="entr_ID" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="entr_Code" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="entr_Nom" Nullable="true" MaxLength="150" />
+          <Property Type="String" Name="entr_Adresse1" Nullable="true" />
+          <Property Type="String" Name="entr_Adresse2" Nullable="true" />
+          <Property Type="String" Name="entr_Mobile1" Nullable="true" />
+          <Property Type="String" Name="entr_Mobile2" Nullable="true" />
+          <Property Type="String" Name="entr_Mobile3" Nullable="true" />
+          <Property Type="String" Name="entr_Fixe1" Nullable="true" />
+          <Property Type="String" Name="entr_Fixe2" Nullable="true" />
+          <Property Type="String" Name="entr_Fixe3" Nullable="true" />
+          <Property Type="String" Name="entr_Fax1" Nullable="true" />
+          <Property Type="String" Name="entr_Fax2" Nullable="true" />
+          <Property Type="String" Name="entr_Email" Nullable="true" />
+          <Property Type="String" Name="entr_Note" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -6457,13 +6486,13 @@
           <EntitySetMapping Name="Branches">
             <EntityTypeMapping TypeName="SystemSalesModel.Branche">
               <MappingFragment StoreEntitySet="Branche">
+                <ScalarProperty Name="barn_Fixe" ColumnName="barn_Fixe" />
+                <ScalarProperty Name="barn_Note" ColumnName="barn_Note" />
                 <ScalarProperty Name="barn_ID" ColumnName="barn_ID" />
                 <ScalarProperty Name="barn_Code" ColumnName="barn_Code" />
                 <ScalarProperty Name="barn_Nom" ColumnName="barn_Nom" />
                 <ScalarProperty Name="barn_Adresse" ColumnName="barn_Adresse" />
-                <ScalarProperty Name="barn_Tele" ColumnName="barn_Tele" />
                 <ScalarProperty Name="barn_Mobile" ColumnName="barn_Mobile" />
-                <ScalarProperty Name="barn_Adresse_Auxi" ColumnName="barn_Adresse_Auxi" />
                 <ScalarProperty Name="barn_Date_Creation" ColumnName="barn_Date_Creation" />
                 <ScalarProperty Name="barn_Status" ColumnName="barn_Status" />
                 <ScalarProperty Name="entr_ID" ColumnName="entr_ID" />
@@ -7453,6 +7482,39 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="MaxID_Entreprise_Info" FunctionName="SystemSalesModel.Store.MaxID_Entreprise_Info" >
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Branche" FunctionName="SystemSalesModel.Store.Select_Branche">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SystemSalesModel.Select_Branche_Result">
+                <ScalarProperty Name="barn_ID" ColumnName="barn_ID" />
+                <ScalarProperty Name="barn_Code" ColumnName="barn_Code" />
+                <ScalarProperty Name="barn_Nom" ColumnName="barn_Nom" />
+                <ScalarProperty Name="barn_Mobile" ColumnName="barn_Mobile" />
+                <ScalarProperty Name="barn_Fix" ColumnName="barn_Fix" />
+                <ScalarProperty Name="barn_Adresse" ColumnName="barn_Adresse" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Select_Entreprise_Info" FunctionName="SystemSalesModel.Store.Select_Entreprise_Info">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SystemSalesModel.Select_Entreprise_Info_Result">
+                <ScalarProperty Name="entr_ID" ColumnName="entr_ID" />
+                <ScalarProperty Name="entr_Code" ColumnName="entr_Code" />
+                <ScalarProperty Name="entr_Nom" ColumnName="entr_Nom" />
+                <ScalarProperty Name="entr_Adresse1" ColumnName="entr_Adresse1" />
+                <ScalarProperty Name="entr_Adresse2" ColumnName="entr_Adresse2" />
+                <ScalarProperty Name="entr_Mobile1" ColumnName="entr_Mobile1" />
+                <ScalarProperty Name="entr_Mobile2" ColumnName="entr_Mobile2" />
+                <ScalarProperty Name="entr_Mobile3" ColumnName="entr_Mobile3" />
+                <ScalarProperty Name="entr_Fixe1" ColumnName="entr_Fixe1" />
+                <ScalarProperty Name="entr_Fixe2" ColumnName="entr_Fixe2" />
+                <ScalarProperty Name="entr_Fixe3" ColumnName="entr_Fixe3" />
+                <ScalarProperty Name="entr_Fax1" ColumnName="entr_Fax1" />
+                <ScalarProperty Name="entr_Fax2" ColumnName="entr_Fax2" />
+                <ScalarProperty Name="entr_Email" ColumnName="entr_Email" />
+                <ScalarProperty Name="entr_Note" ColumnName="entr_Note" />
+              </ComplexTypeMapping>
+            </ResultMapping>
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>

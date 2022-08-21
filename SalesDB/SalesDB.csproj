@@ -260,6 +260,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DB\Select_Branche_Result.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Select_Entreprise_Info_Result.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Traitement.cs">
       <DependentUpon>SDB.tt</DependentUpon>
     </Compile>
