@@ -5,14 +5,15 @@ using SalesDB.Proc_DB;
 using sysSales.IForms;
 using System;
 using System.Linq;
+using System.Windows.Forms;
 using static myTools.Tools;
 
 namespace sysSales.Sub
 {
-    public partial class frmBranche : IFrm
+    public partial class frmBranche : IFrmOut
     {
         #region Variables
-        private Branche bran;
+        private Branche brn;
         private CRUD<Branche> crd = new CRUD<Branche>();
         private SystemSalesEntities db = new SystemSalesEntities();
         #endregion Variables
@@ -26,6 +27,7 @@ namespace sysSales.Sub
             dtCreateDate.Text = string.Empty;
             txtAddress.Text = string.Empty;
             txtNote.Text = string.Empty;
+            txtName.Focus();
         }
         private string getCode()
         {
@@ -41,8 +43,50 @@ namespace sysSales.Sub
         #region Override
         public override void Data_Add()
         {
-            ClearData();
-            base.Data_Add();
+            try
+            {
+                if (vp.Validate())
+                {
+                    brn = new Branche();
+                    brn.barn_ID = Convert.ToDecimal(getMaxID());
+                    brn.barn_Code = getCode();
+                    brn.barn_Nom = txtName.Text;
+                    brn.barn_Mobile = txtMobile.Text;
+                    brn.barn_Fixe = txtFixe.Text;
+                    brn.barn_Adresse = txtAddress.Text;
+                    brn.barn_Date_Creation = dtCreateDate.DateTime;
+                    brn.barn_Status = 1;
+                    brn.barn_Note = txtNote.Text;
+                    brn.entr_ID = 1;
+                    if (crd.Add(brn))
+                    {
+                        ClearData();
+                        base.Data_Add();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ILmsgBox(ex.InnerException.InnerException.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public override void Data_Delete()
+        {
+            base.Data_Delete();
+        }
+        public override void Data_Update()
+        {
+            try
+            {
+                if (vp.Validate())
+                {
+                }
+            }
+            catch (Exception ex)
+            {
+                ILmsgBox(ex.InnerException.InnerException.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            base.Data_Update();
         }
         #endregion Override
         public frmBranche()

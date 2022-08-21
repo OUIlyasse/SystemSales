@@ -90,7 +90,7 @@
             this.panel2.Controls.Add(this.lcgBranch);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1081, 438);
+            this.panel2.Size = new System.Drawing.Size(858, 435);
             this.panel2.TabIndex = 2;
             // 
             // lcgBranch
@@ -107,36 +107,36 @@
             this.lcgBranch.Location = new System.Drawing.Point(0, 0);
             this.lcgBranch.Name = "lcgBranch";
             this.lcgBranch.Root = this.layoutControlGroup1;
-            this.lcgBranch.Size = new System.Drawing.Size(1081, 438);
+            this.lcgBranch.Size = new System.Drawing.Size(858, 435);
             this.lcgBranch.TabIndex = 0;
             this.lcgBranch.Text = "layoutControl1";
             // 
             // dtCreateDate
             // 
             this.dtCreateDate.EditValue = null;
-            this.dtCreateDate.Location = new System.Drawing.Point(121, 117);
+            this.dtCreateDate.Location = new System.Drawing.Point(121, 112);
             this.dtCreateDate.Name = "dtCreateDate";
             this.dtCreateDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtCreateDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtCreateDate.Size = new System.Drawing.Size(417, 24);
+            this.dtCreateDate.Size = new System.Drawing.Size(306, 24);
             this.dtCreateDate.StyleController = this.lcgBranch;
             this.dtCreateDate.TabIndex = 10;
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(121, 320);
+            this.txtNote.Location = new System.Drawing.Point(121, 302);
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(948, 106);
+            this.txtNote.Size = new System.Drawing.Size(725, 121);
             this.txtNote.StyleController = this.lcgBranch;
             this.txtNote.TabIndex = 9;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(121, 178);
+            this.txtAddress.Location = new System.Drawing.Point(121, 162);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(948, 105);
+            this.txtAddress.Size = new System.Drawing.Size(725, 114);
             this.txtAddress.StyleController = this.lcgBranch;
             this.txtAddress.TabIndex = 8;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -146,12 +146,12 @@
             // 
             // txtFixe
             // 
-            this.txtFixe.Location = new System.Drawing.Point(651, 71);
+            this.txtFixe.Location = new System.Drawing.Point(540, 62);
             this.txtFixe.Name = "txtFixe";
             this.txtFixe.Properties.Mask.BeepOnError = true;
             this.txtFixe.Properties.Mask.EditMask = "05-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
             this.txtFixe.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtFixe.Size = new System.Drawing.Size(418, 24);
+            this.txtFixe.Size = new System.Drawing.Size(306, 24);
             this.txtFixe.StyleController = this.lcgBranch;
             this.txtFixe.TabIndex = 7;
             conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -160,20 +160,20 @@
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(121, 71);
+            this.txtMobile.Location = new System.Drawing.Point(121, 62);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Properties.Mask.BeepOnError = true;
             this.txtMobile.Properties.Mask.EditMask = "\\d\\d-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
             this.txtMobile.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtMobile.Size = new System.Drawing.Size(417, 24);
+            this.txtMobile.Size = new System.Drawing.Size(306, 24);
             this.txtMobile.StyleController = this.lcgBranch;
             this.txtMobile.TabIndex = 6;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(651, 12);
+            this.txtName.Location = new System.Drawing.Point(540, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(418, 24);
+            this.txtName.Size = new System.Drawing.Size(306, 24);
             this.txtName.StyleController = this.lcgBranch;
             this.txtName.TabIndex = 5;
             conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
@@ -184,7 +184,7 @@
             // 
             this.txtCode.Location = new System.Drawing.Point(121, 12);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(417, 24);
+            this.txtCode.Size = new System.Drawing.Size(306, 24);
             this.txtCode.StyleController = this.lcgBranch;
             this.txtCode.TabIndex = 4;
             // 
@@ -208,7 +208,7 @@
             this.emptySpaceItem5,
             this.emptySpaceItem4});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(1081, 438);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(858, 435);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -216,61 +216,61 @@
             this.layoutControlItem1.Control = this.txtCode;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(530, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(419, 28);
             this.layoutControlItem1.Text = "Code";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(106, 17);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.txtMobile;
-            this.layoutControlItem3.Location = new System.Drawing.Point(0, 59);
+            this.layoutControlItem3.Location = new System.Drawing.Point(0, 50);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(530, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(419, 28);
             this.layoutControlItem3.Text = "Mobile";
             this.layoutControlItem3.TextSize = new System.Drawing.Size(106, 17);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.txtAddress;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 166);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 150);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(1061, 109);
+            this.layoutControlItem5.Size = new System.Drawing.Size(838, 118);
             this.layoutControlItem5.Text = "Address";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(106, 17);
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.txtNote;
-            this.layoutControlItem6.Location = new System.Drawing.Point(0, 308);
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 290);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(1061, 110);
+            this.layoutControlItem6.Size = new System.Drawing.Size(838, 125);
             this.layoutControlItem6.Text = "Note";
             this.layoutControlItem6.TextSize = new System.Drawing.Size(106, 17);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.txtName;
-            this.layoutControlItem2.Location = new System.Drawing.Point(530, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(419, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(531, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(419, 28);
             this.layoutControlItem2.Text = "Name";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(106, 17);
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.txtFixe;
-            this.layoutControlItem4.Location = new System.Drawing.Point(530, 59);
+            this.layoutControlItem4.Location = new System.Drawing.Point(419, 50);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(531, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(419, 28);
             this.layoutControlItem4.Text = "Fixe";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(106, 17);
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.dtCreateDate;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 105);
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 100);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(530, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(419, 28);
             this.layoutControlItem7.Text = "Creation date";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(106, 17);
             // 
@@ -279,16 +279,16 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 28);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(1061, 31);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(838, 22);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 87);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 78);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(1061, 18);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(838, 22);
             this.emptySpaceItem2.Text = "emptySpaceItem1";
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -296,27 +296,27 @@
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 133);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 128);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(1061, 33);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(838, 22);
             this.emptySpaceItem3.Text = "emptySpaceItem1";
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem5
             // 
             this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(530, 105);
+            this.emptySpaceItem5.Location = new System.Drawing.Point(419, 100);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(531, 28);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(419, 28);
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
             this.emptySpaceItem4.CustomizationFormText = "emptySpaceItem1";
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 275);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 268);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(1061, 33);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(838, 22);
             this.emptySpaceItem4.Text = "emptySpaceItem1";
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -327,11 +327,13 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 556);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(882, 553);
             this.Controls.Add(this.panel2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBranche";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Branch";
             this.Controls.SetChildIndex(this.panel2, 0);
             this.panel2.ResumeLayout(false);

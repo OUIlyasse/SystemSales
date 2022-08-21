@@ -109,5 +109,104 @@ namespace SalesDB.DB
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Select_Entreprise_Info_Result>("Select_Entreprise_Info");
         }
+    
+        public virtual int Delete_Branche(Nullable<decimal> barn_ID)
+        {
+            var barn_IDParameter = barn_ID.HasValue ?
+                new ObjectParameter("barn_ID", barn_ID) :
+                new ObjectParameter("barn_ID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_Branche", barn_IDParameter);
+        }
+    
+        public virtual int Insert_Branche(Nullable<decimal> barn_ID, string barn_Code, string barn_Nom, string barn_Mobile, string barn_Fixe, string barn_Adresse, Nullable<System.DateTime> barn_Date_Creation, Nullable<int> barn_Status, string barn_Note, Nullable<decimal> entr_ID)
+        {
+            var barn_IDParameter = barn_ID.HasValue ?
+                new ObjectParameter("barn_ID", barn_ID) :
+                new ObjectParameter("barn_ID", typeof(decimal));
+    
+            var barn_CodeParameter = barn_Code != null ?
+                new ObjectParameter("barn_Code", barn_Code) :
+                new ObjectParameter("barn_Code", typeof(string));
+    
+            var barn_NomParameter = barn_Nom != null ?
+                new ObjectParameter("barn_Nom", barn_Nom) :
+                new ObjectParameter("barn_Nom", typeof(string));
+    
+            var barn_MobileParameter = barn_Mobile != null ?
+                new ObjectParameter("barn_Mobile", barn_Mobile) :
+                new ObjectParameter("barn_Mobile", typeof(string));
+    
+            var barn_FixeParameter = barn_Fixe != null ?
+                new ObjectParameter("barn_Fixe", barn_Fixe) :
+                new ObjectParameter("barn_Fixe", typeof(string));
+    
+            var barn_AdresseParameter = barn_Adresse != null ?
+                new ObjectParameter("barn_Adresse", barn_Adresse) :
+                new ObjectParameter("barn_Adresse", typeof(string));
+    
+            var barn_Date_CreationParameter = barn_Date_Creation.HasValue ?
+                new ObjectParameter("barn_Date_Creation", barn_Date_Creation) :
+                new ObjectParameter("barn_Date_Creation", typeof(System.DateTime));
+    
+            var barn_StatusParameter = barn_Status.HasValue ?
+                new ObjectParameter("barn_Status", barn_Status) :
+                new ObjectParameter("barn_Status", typeof(int));
+    
+            var barn_NoteParameter = barn_Note != null ?
+                new ObjectParameter("barn_Note", barn_Note) :
+                new ObjectParameter("barn_Note", typeof(string));
+    
+            var entr_IDParameter = entr_ID.HasValue ?
+                new ObjectParameter("entr_ID", entr_ID) :
+                new ObjectParameter("entr_ID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Insert_Branche", barn_IDParameter, barn_CodeParameter, barn_NomParameter, barn_MobileParameter, barn_FixeParameter, barn_AdresseParameter, barn_Date_CreationParameter, barn_StatusParameter, barn_NoteParameter, entr_IDParameter);
+        }
+    
+        public virtual int Update_Branche(Nullable<decimal> barn_ID, string barn_Code, string barn_Nom, string barn_Mobile, string barn_Fixe, string barn_Adresse, Nullable<System.DateTime> barn_Date_Creation, Nullable<int> barn_Status, string barn_Note, Nullable<decimal> entr_ID)
+        {
+            var barn_IDParameter = barn_ID.HasValue ?
+                new ObjectParameter("barn_ID", barn_ID) :
+                new ObjectParameter("barn_ID", typeof(decimal));
+    
+            var barn_CodeParameter = barn_Code != null ?
+                new ObjectParameter("barn_Code", barn_Code) :
+                new ObjectParameter("barn_Code", typeof(string));
+    
+            var barn_NomParameter = barn_Nom != null ?
+                new ObjectParameter("barn_Nom", barn_Nom) :
+                new ObjectParameter("barn_Nom", typeof(string));
+    
+            var barn_MobileParameter = barn_Mobile != null ?
+                new ObjectParameter("barn_Mobile", barn_Mobile) :
+                new ObjectParameter("barn_Mobile", typeof(string));
+    
+            var barn_FixeParameter = barn_Fixe != null ?
+                new ObjectParameter("barn_Fixe", barn_Fixe) :
+                new ObjectParameter("barn_Fixe", typeof(string));
+    
+            var barn_AdresseParameter = barn_Adresse != null ?
+                new ObjectParameter("barn_Adresse", barn_Adresse) :
+                new ObjectParameter("barn_Adresse", typeof(string));
+    
+            var barn_Date_CreationParameter = barn_Date_Creation.HasValue ?
+                new ObjectParameter("barn_Date_Creation", barn_Date_Creation) :
+                new ObjectParameter("barn_Date_Creation", typeof(System.DateTime));
+    
+            var barn_StatusParameter = barn_Status.HasValue ?
+                new ObjectParameter("barn_Status", barn_Status) :
+                new ObjectParameter("barn_Status", typeof(int));
+    
+            var barn_NoteParameter = barn_Note != null ?
+                new ObjectParameter("barn_Note", barn_Note) :
+                new ObjectParameter("barn_Note", typeof(string));
+    
+            var entr_IDParameter = entr_ID.HasValue ?
+                new ObjectParameter("entr_ID", entr_ID) :
+                new ObjectParameter("entr_ID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Update_Branche", barn_IDParameter, barn_CodeParameter, barn_NomParameter, barn_MobileParameter, barn_FixeParameter, barn_AdresseParameter, barn_Date_CreationParameter, barn_StatusParameter, barn_NoteParameter, entr_IDParameter);
+        }
     }
 }
