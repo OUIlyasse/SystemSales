@@ -2494,36 +2494,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="Delete_Branche" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="barn_ID" Type="numeric" Mode="In" />
-        </Function>
-        <Function Name="Insert_Branche" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="barn_ID" Type="numeric" Mode="In" />
-          <Parameter Name="barn_Code" Type="nvarchar" Mode="In" />
-          <Parameter Name="barn_Nom" Type="nvarchar" Mode="In" />
-          <Parameter Name="barn_Mobile" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="barn_Fixe" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="barn_Adresse" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="barn_Date_Creation" Type="date" Mode="In" />
-          <Parameter Name="barn_Status" Type="int" Mode="In" />
-          <Parameter Name="barn_Note" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="entr_ID" Type="numeric" Mode="In" />
-        </Function>
-        <Function Name="MaxID_Entreprise_Info" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="Select_Branche" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="Select_Entreprise_Info" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="Update_Branche" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="barn_ID" Type="numeric" Mode="In" />
-          <Parameter Name="barn_Code" Type="nvarchar" Mode="In" />
-          <Parameter Name="barn_Nom" Type="nvarchar" Mode="In" />
-          <Parameter Name="barn_Mobile" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="barn_Fixe" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="barn_Adresse" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="barn_Date_Creation" Type="date" Mode="In" />
-          <Parameter Name="barn_Status" Type="int" Mode="In" />
-          <Parameter Name="barn_Note" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="entr_ID" Type="numeric" Mode="In" />
-        </Function>
         <EntityContainer Name="SystemSalesModelStoreContainer">
           <EntitySet Name="Banque" EntityType="Self.Banque" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Bon_Destruction" EntityType="Self.Bon_Destruction" Schema="dbo" store:Type="Tables" />
@@ -6354,36 +6325,7 @@
             <End Role="Unite_Mesure" EntitySet="Unite_Mesure" />
             <End Role="Unite_Type" EntitySet="Unite_Type" />
           </AssociationSet>
-          <FunctionImport Name="MaxID_Entreprise_Info" />
-          <FunctionImport Name="Select_Branche" ReturnType="Collection(SystemSalesModel.Select_Branche_Result)" />
-          <FunctionImport Name="Select_Entreprise_Info" ReturnType="Collection(SystemSalesModel.Select_Entreprise_Info_Result)" />
-          <FunctionImport Name="Delete_Branche">
-            <Parameter Name="barn_ID" Mode="In" Type="Decimal" />
-          </FunctionImport>
-          <FunctionImport Name="Insert_Branche">
-            <Parameter Name="barn_ID" Mode="In" Type="Decimal" />
-            <Parameter Name="barn_Code" Mode="In" Type="String" />
-            <Parameter Name="barn_Nom" Mode="In" Type="String" />
-            <Parameter Name="barn_Mobile" Mode="In" Type="String" />
-            <Parameter Name="barn_Fixe" Mode="In" Type="String" />
-            <Parameter Name="barn_Adresse" Mode="In" Type="String" />
-            <Parameter Name="barn_Date_Creation" Mode="In" Type="DateTime" />
-            <Parameter Name="barn_Status" Mode="In" Type="Int32" />
-            <Parameter Name="barn_Note" Mode="In" Type="String" />
-            <Parameter Name="entr_ID" Mode="In" Type="Decimal" />
-          </FunctionImport>
-          <FunctionImport Name="Update_Branche">
-            <Parameter Name="barn_ID" Mode="In" Type="Decimal" />
-            <Parameter Name="barn_Code" Mode="In" Type="String" />
-            <Parameter Name="barn_Nom" Mode="In" Type="String" />
-            <Parameter Name="barn_Mobile" Mode="In" Type="String" />
-            <Parameter Name="barn_Fixe" Mode="In" Type="String" />
-            <Parameter Name="barn_Adresse" Mode="In" Type="String" />
-            <Parameter Name="barn_Date_Creation" Mode="In" Type="DateTime" />
-            <Parameter Name="barn_Status" Mode="In" Type="Int32" />
-            <Parameter Name="barn_Note" Mode="In" Type="String" />
-            <Parameter Name="entr_ID" Mode="In" Type="Decimal" />
-          </FunctionImport>
+          <FunctionImport Name="Select_Branche" ReturnType="Collection(SystemSalesModel.Select_Branche_Result1)" />
         </EntityContainer>
         <ComplexType Name="MaxID_Entreprise_Info_Result">
           <Property Type="Decimal" Name="Column1" Nullable="false" Precision="19" Scale="0" />
@@ -6412,6 +6354,15 @@
           <Property Type="String" Name="entr_Fax2" Nullable="true" />
           <Property Type="String" Name="entr_Email" Nullable="true" />
           <Property Type="String" Name="entr_Note" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="Select_Branche_Result1">
+          <Property Type="Decimal" Name="barn_ID" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="String" Name="barn_Code" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="barn_Nom" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="barn_Mobile" Nullable="true" />
+          <Property Type="String" Name="barn_Fixe" Nullable="true" />
+          <Property Type="String" Name="barn_Adresse" Nullable="true" />
+          <Property Type="DateTime" Name="barn_Date_Creation" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -7535,45 +7486,20 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="MaxID_Entreprise_Info" FunctionName="SystemSalesModel.Store.MaxID_Entreprise_Info" >
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="Select_Branche" FunctionName="SystemSalesModel.Store.Select_Branche">
             <ResultMapping>
-              <ComplexTypeMapping TypeName="SystemSalesModel.Select_Branche_Result">
+              <ComplexTypeMapping TypeName="SystemSalesModel.Select_Branche_Result1">
                 <ScalarProperty Name="barn_ID" ColumnName="barn_ID" />
                 <ScalarProperty Name="barn_Code" ColumnName="barn_Code" />
                 <ScalarProperty Name="barn_Nom" ColumnName="barn_Nom" />
                 <ScalarProperty Name="barn_Mobile" ColumnName="barn_Mobile" />
-                <ScalarProperty Name="barn_Fix" ColumnName="barn_Fix" />
+                <ScalarProperty Name="barn_Fixe" ColumnName="barn_Fixe" />
                 <ScalarProperty Name="barn_Adresse" ColumnName="barn_Adresse" />
+                <ScalarProperty Name="barn_Date_Creation" ColumnName="barn_Date_Creation" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="Select_Entreprise_Info" FunctionName="SystemSalesModel.Store.Select_Entreprise_Info">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="SystemSalesModel.Select_Entreprise_Info_Result">
-                <ScalarProperty Name="entr_ID" ColumnName="entr_ID" />
-                <ScalarProperty Name="entr_Code" ColumnName="entr_Code" />
-                <ScalarProperty Name="entr_Nom" ColumnName="entr_Nom" />
-                <ScalarProperty Name="entr_Adresse1" ColumnName="entr_Adresse1" />
-                <ScalarProperty Name="entr_Adresse2" ColumnName="entr_Adresse2" />
-                <ScalarProperty Name="entr_Mobile1" ColumnName="entr_Mobile1" />
-                <ScalarProperty Name="entr_Mobile2" ColumnName="entr_Mobile2" />
-                <ScalarProperty Name="entr_Mobile3" ColumnName="entr_Mobile3" />
-                <ScalarProperty Name="entr_Fixe1" ColumnName="entr_Fixe1" />
-                <ScalarProperty Name="entr_Fixe2" ColumnName="entr_Fixe2" />
-                <ScalarProperty Name="entr_Fixe3" ColumnName="entr_Fixe3" />
-                <ScalarProperty Name="entr_Fax1" ColumnName="entr_Fax1" />
-                <ScalarProperty Name="entr_Fax2" ColumnName="entr_Fax2" />
-                <ScalarProperty Name="entr_Email" ColumnName="entr_Email" />
-                <ScalarProperty Name="entr_Note" ColumnName="entr_Note" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="Delete_Branche" FunctionName="SystemSalesModel.Store.Delete_Branche" />
-          <FunctionImportMapping FunctionImportName="Insert_Branche" FunctionName="SystemSalesModel.Store.Insert_Branche" />
-          <FunctionImportMapping FunctionImportName="Update_Branche" FunctionName="SystemSalesModel.Store.Update_Branche" />
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

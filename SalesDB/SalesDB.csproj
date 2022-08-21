@@ -263,6 +263,9 @@
     <Compile Include="DB\Select_Branche_Result.cs">
       <DependentUpon>SDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\Select_Branche_Result1.cs">
+      <DependentUpon>SDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Select_Entreprise_Info_Result.cs">
       <DependentUpon>SDB.tt</DependentUpon>
     </Compile>

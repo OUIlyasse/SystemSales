@@ -1,4 +1,5 @@
-﻿using sysSales.Sub;
+﻿using sysSales.frmList;
+using sysSales.Sub;
 using static myTools.Tools;
 
 namespace sysSales.Main
@@ -27,8 +28,8 @@ namespace sysSales.Main
         }
         private void btnBranch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmBranche f = new frmBranche();
-            f.ShowDialog();
+            FrmListBranche f = new FrmListBranche();
+            OpenForm(this, f, mdiManager);
         }
         private void btnSoftware_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {

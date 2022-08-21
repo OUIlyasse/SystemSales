@@ -12,6 +12,9 @@ namespace sysSales.IForms
         private bool t;
         #endregion Variables
         #region Codes
+        public virtual void getData()
+        {
+        }
         public virtual void OForm(bool t, XtraForm form)
         {
             if (t == true)
@@ -28,17 +31,16 @@ namespace sysSales.IForms
         public IFrmList()
         {
             InitializeComponent();
+            //getData();
         }
-        public IFrmList(bool t, XtraForm form)
-        {
-            InitializeComponent();
-            this.t = t;
-            this.form = form;
-        }
-
         private void btnNew_Click(object sender, EventArgs e)
         {
             OForm(t, form);
+        }
+
+        private void IFrmList_Load(object sender, EventArgs e)
+        {
+            getData();
         }
     }
 }
