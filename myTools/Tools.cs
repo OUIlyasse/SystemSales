@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
+using DevExpress.XtraLayout;
 using DevExpress.XtraTabbedMdi;
 using System;
 using System.Windows.Forms;

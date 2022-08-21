@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -50,15 +50,6 @@
             this.groupControl1.Size = new System.Drawing.Size(539, 81);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "groupControl1";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.groupControl1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 550);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1264, 100);
-            this.panel1.TabIndex = 1;
             // 
             // btnDelete
             // 
@@ -107,6 +98,15 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.ToolTipTitle = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupControl1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 550);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1264, 100);
+            this.panel1.TabIndex = 1;
             // 
             // IFrm
             // 

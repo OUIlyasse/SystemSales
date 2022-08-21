@@ -229,7 +229,7 @@
             this.txtFi1.Name = "txtFi1";
             this.txtFi1.Properties.Appearance.Options.UseFont = true;
             this.txtFi1.Properties.Mask.BeepOnError = true;
-            this.txtFi1.Properties.Mask.EditMask = "05\\d\\d\\d\\d\\d\\d\\d\\d";
+            this.txtFi1.Properties.Mask.EditMask = "05-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
             this.txtFi1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtFi1.Size = new System.Drawing.Size(410, 24);
             this.txtFi1.StyleController = this.layoutControl1;
@@ -287,7 +287,7 @@
             this.txtFi2.Name = "txtFi2";
             this.txtFi2.Properties.Appearance.Options.UseFont = true;
             this.txtFi2.Properties.Mask.BeepOnError = true;
-            this.txtFi2.Properties.Mask.EditMask = "05\\d\\d\\d\\d\\d\\d\\d\\d";
+            this.txtFi2.Properties.Mask.EditMask = "05-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
             this.txtFi2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtFi2.Size = new System.Drawing.Size(242, 24);
             this.txtFi2.StyleController = this.layoutControl1;
@@ -309,7 +309,7 @@
             this.txtFi3.Properties.Appearance.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFi3.Properties.Appearance.Options.UseFont = true;
             this.txtFi3.Properties.Mask.BeepOnError = true;
-            this.txtFi3.Properties.Mask.EditMask = "05\\d\\d\\d\\d\\d\\d\\d\\d";
+            this.txtFi3.Properties.Mask.EditMask = "05-\\d\\d-\\d\\d-\\d\\d-\\d\\d";
             this.txtFi3.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtFi3.Size = new System.Drawing.Size(277, 24);
             this.txtFi3.StyleController = this.layoutControl1;

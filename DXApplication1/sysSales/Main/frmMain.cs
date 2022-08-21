@@ -25,6 +25,11 @@ namespace sysSales.Main
         {
             txtStatus.Caption = message;
         }
+        private void btnBranch_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmBranche f = new frmBranche();
+            f.ShowDialog();
+        }
         private void btnSoftware_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmEntreprise_Info f = new frmEntreprise_Info();
