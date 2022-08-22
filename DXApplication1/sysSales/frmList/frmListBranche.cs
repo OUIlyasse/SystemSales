@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using SalesDB.DB;
 using sysSales.IForms;
+using sysSales.Sub;
 using System.Windows.Forms;
 using static myTools.Tools;
 
@@ -12,6 +13,7 @@ namespace sysSales.frmList
         private Branche brn;
         //private CRUD<Entreprise_Info> crd = new CRUD<Entreprise_Info>();
         private SystemSalesEntities db = new SystemSalesEntities();
+        private frmBranche f = new frmBranche();
         #endregion Variables
         #region Override
         public override void getData()
@@ -26,12 +28,17 @@ namespace sysSales.frmList
                 ILmsgBox(ex.InnerException.InnerException.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public override void OForm(bool t, XtraForm form)
+        public override void showForm(XtraForm form)
         {
-            base.OForm(t, form);
+            base.showForm(f);
         }
         #endregion Override
         public FrmListBranche()
+        {
+            InitializeComponent();
+        }
+        public FrmListBranche(bool t, XtraForm form)
+            : base(t, form)
         {
             InitializeComponent();
         }

@@ -1,6 +1,9 @@
 ﻿using DevExpress.XtraEditors;
+using SalesDB.DB;
 using sysSales.Main;
 using System;
+using System.Collections;
+using System.Linq.Expressions;
 using static myTools.Tools;
 
 namespace sysSales.IForms
@@ -9,23 +12,14 @@ namespace sysSales.IForms
     {
         #region Variables
         private XtraForm form;
-        private bool t;
         #endregion Variables
         #region Codes
         public virtual void getData()
         {
         }
-        public virtual void OForm(bool t, XtraForm form)
+        public virtual void showForm(XtraForm form)
         {
-            if (t == true)
-            {
-                frmMain f = new frmMain();
-                OpenForm(f, form, f.mdiManager);
-            }
-            else
-            {
-                form.ShowDialog();
-            }
+            form.ShowDialog();
         }
         #endregion Codes
         public IFrmList()
@@ -33,9 +27,15 @@ namespace sysSales.IForms
             InitializeComponent();
             //getData();
         }
+        public IFrmList(bool t, XtraForm form)
+        {
+            InitializeComponent();
+            this.t = t;
+            this.form = form;
+        }
         private void btnNew_Click(object sender, EventArgs e)
         {
-            OForm(t, form);
+            showForm(form);
         }
 
         private void IFrmList_Load(object sender, EventArgs e)

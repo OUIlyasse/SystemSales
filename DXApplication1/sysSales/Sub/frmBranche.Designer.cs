@@ -178,6 +178,7 @@
             this.txtName.TabIndex = 5;
             conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule3.ErrorText = "This field is blank, please fill it in";
+            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
             this.vp.SetValidationRule(this.txtName, conditionValidationRule3);
             // 
             // txtCode
@@ -333,6 +334,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBranche";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Branch";
             this.Controls.SetChildIndex(this.panel2, 0);
