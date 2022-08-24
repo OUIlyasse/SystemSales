@@ -1,7 +1,6 @@
-﻿using DevExpress.XtraEditors;
-using DevExpress.XtraLayout;
-using SalesDB.DB;
+﻿using SalesDB.DB;
 using SalesDB.Proc_DB;
+using sysSales.frmList;
 using sysSales.IForms;
 using System;
 using System.Linq;
@@ -16,9 +15,10 @@ namespace sysSales.Sub
         private Branche brn;
         private CRUD<Branche> crd = new CRUD<Branche>();
         private SystemSalesEntities db = new SystemSalesEntities();
+        private FrmListBranche flb;
         #endregion Variables
         #region myCodes
-        public void ClearData()
+        public override void ClearData()
         {
             txtCode.Text = getCode();
             txtName.Text = string.Empty;
@@ -38,6 +38,7 @@ namespace sysSales.Sub
             var max = db.Branches.Any() ? db.Branches.Max(x => x.barn_ID) + 1 : 1;
             return max.ToString();
         }
+
         #endregion myCodes
 
         #region Override
@@ -60,14 +61,18 @@ namespace sysSales.Sub
                     brn.entr_ID = 1;
                     if (crd.Add(brn))
                     {
-                        ClearData();
                         base.Data_Add();
+                    }
+                    else
+                    {
+                        return;
                     }
                 }
             }
             catch (Exception ex)
             {
                 ILmsgBox(ex.InnerException.InnerException.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
         }
         public override void Data_Delete()
@@ -88,10 +93,15 @@ namespace sysSales.Sub
             }
             base.Data_Update();
         }
+        public override void getData()
+        {
+            flb.gcBranche.DataSource = db.Select_Branche();
+        }
         #endregion Override
-        public frmBranche()
+        public frmBranche(FrmListBranche frm)
         {
             InitializeComponent();
+            flb = frm;
             ClearData();
         }
     }

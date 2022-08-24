@@ -94,7 +94,7 @@
             this.barn_Nom.FieldName = "barn_Nom";
             this.barn_Nom.Name = "barn_Nom";
             this.barn_Nom.Visible = true;
-            this.barn_Nom.VisibleIndex = 2;
+            this.barn_Nom.VisibleIndex = 1;
             // 
             // barn_Mobile
             // 
@@ -102,7 +102,7 @@
             this.barn_Mobile.FieldName = "barn_Mobile";
             this.barn_Mobile.Name = "barn_Mobile";
             this.barn_Mobile.Visible = true;
-            this.barn_Mobile.VisibleIndex = 1;
+            this.barn_Mobile.VisibleIndex = 2;
             // 
             // barn_Fixe
             // 
@@ -149,8 +149,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraGrid.GridControl gcBranche;
         private DevExpress.XtraGrid.Views.Grid.GridView gvBranche;
         private DevExpress.XtraGrid.Columns.GridColumn barn_ID;
         private DevExpress.XtraGrid.Columns.GridColumn barn_Code;
@@ -159,5 +157,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn barn_Fixe;
         private DevExpress.XtraGrid.Columns.GridColumn barn_Date_Creation;
         private DevExpress.XtraGrid.Columns.GridColumn barn_Adresse;
+        public DevExpress.XtraGrid.GridControl gcBranche;
     }
 }

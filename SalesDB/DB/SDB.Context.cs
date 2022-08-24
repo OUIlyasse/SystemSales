@@ -14,7 +14,8 @@ namespace SalesDB.DB
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
-    
+    using System.Data.Entity.ModelConfiguration.Conventions;
+
     public partial class SystemSalesEntities : DbContext
     {
         public SystemSalesEntities()
@@ -24,7 +25,8 @@ namespace SalesDB.DB
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            //throw new UnintentionalCodeFirstException();
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     
         public virtual DbSet<Banque> Banques { get; set; }

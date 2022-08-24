@@ -7,17 +7,29 @@ namespace sysSales.IForms
     public partial class IFrmOut : DevExpress.XtraEditors.XtraForm
     {
         #region myCodes
+        public virtual void ClearData()
+        {
+        }
         public virtual void Data_Add()
         {
             ILmsgBox("Data added successfully", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ClearData();
+            getData();
         }
         public virtual void Data_Delete()
         {
             ILmsgBox("Data deleted successfully", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ClearData();
+            getData();
         }
         public virtual void Data_Update()
         {
             ILmsgBox("Data updated successfully", "Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ClearData();
+            getData();
+        }
+        public virtual void getData()
+        {
         }
         #endregion myCodes
         public IFrmOut()

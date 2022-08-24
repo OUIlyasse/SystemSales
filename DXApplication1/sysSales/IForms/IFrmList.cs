@@ -27,12 +27,6 @@ namespace sysSales.IForms
             InitializeComponent();
             //getData();
         }
-        public IFrmList(bool t, XtraForm form)
-        {
-            InitializeComponent();
-            this.t = t;
-            this.form = form;
-        }
         private void btnNew_Click(object sender, EventArgs e)
         {
             showForm(form);
