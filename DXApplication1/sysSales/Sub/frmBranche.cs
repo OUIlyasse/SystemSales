@@ -18,17 +18,6 @@ namespace sysSales.Sub
         private FrmListBranche flb;
         #endregion Variables
         #region myCodes
-        public override void ClearData()
-        {
-            txtCode.Text = getCode();
-            txtName.Text = string.Empty;
-            txtMobile.Text = string.Empty;
-            txtFixe.Text = string.Empty;
-            dtCreateDate.Text = string.Empty;
-            txtAddress.Text = string.Empty;
-            txtNote.Text = string.Empty;
-            txtName.Focus();
-        }
         private string getCode()
         {
             return string.Format("BRN{0:0000}{1}{2}", Convert.ToDecimal(getMaxID()), GetDateTime().ToString("dd"), GetDateTime().ToString("MM"));
@@ -42,32 +31,46 @@ namespace sysSales.Sub
         #endregion myCodes
 
         #region Override
+        public override void ClearData()
+        {
+            txtCode.Text = getCode();
+            txtName.Text = string.Empty;
+            txtMobile.Text = string.Empty;
+            txtFixe.Text = string.Empty;
+            dtCreateDate.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            txtNote.Text = string.Empty;
+            txtName.Focus();
+        }
         public override void Data_Add()
         {
             try
             {
-                if (vp.Validate())
+                if (txtName.Text.Trim() == string.Empty)
+                    txtName.ErrorText = "The name field is empty, please fill it out";
+                else if (txtFixe.Text.Trim() == string.Empty)
+                    txtFixe.ErrorText = "The fixe field is empty, please fill it out";
+                else if (txtAddress.Text.Trim() == string.Empty)
+                    txtAddress.ErrorText = "The address field is empty, please fill it out";
+                else
                 {
-                    brn = new Branche();
-                    brn.barn_ID = Convert.ToDecimal(getMaxID());
-                    brn.barn_Code = getCode();
-                    brn.barn_Nom = txtName.Text;
-                    brn.barn_Mobile = txtMobile.Text;
-                    brn.barn_Fixe = txtFixe.Text;
-                    brn.barn_Adresse = txtAddress.Text;
-                    brn.barn_Date_Creation = dtCreateDate.DateTime;
-                    brn.barn_Status = 1;
-                    brn.barn_Note = txtNote.Text;
-                    brn.entr_ID = 1;
-                    if (crd.Add(brn))
-                    {
+                    var ID = Convert.ToDecimal(getMaxID());
+                    var Code = getCode();
+                    var Nom = txtName.Text;
+                    var Mobile = txtMobile.Text;
+                    var Fixe = txtFixe.Text;
+                    var Adresse = txtAddress.Text;
+                    var Date_Creation = dtCreateDate.DateTime;
+                    var Status = 1;
+                    var Note = txtNote.Text;
+                    var entr_ID = 1;
+                    if (db.Insert_Branche(ID, Code, Nom, Mobile, Fixe, Adresse, Date_Creation, Status, Note, entr_ID) > 0)
                         base.Data_Add();
-                    }
                     else
-                    {
-                        return;
-                    }
+                        ILmsgBox("The name field already exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                //db.Insert_Branche(ID, Code, Nom, Mobile, Fixe, Adresse, Date_Creation, Status, Note, entr_ID);
             }
             catch (Exception ex)
             {
@@ -83,9 +86,6 @@ namespace sysSales.Sub
         {
             try
             {
-                if (vp.Validate())
-                {
-                }
             }
             catch (Exception ex)
             {

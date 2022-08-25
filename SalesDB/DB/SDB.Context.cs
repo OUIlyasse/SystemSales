@@ -14,8 +14,7 @@ namespace SalesDB.DB
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
-    using System.Data.Entity.ModelConfiguration.Conventions;
-
+    
     public partial class SystemSalesEntities : DbContext
     {
         public SystemSalesEntities()
@@ -25,8 +24,7 @@ namespace SalesDB.DB
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //throw new UnintentionalCodeFirstException();
-            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            throw new UnintentionalCodeFirstException();
         }
     
         public virtual DbSet<Banque> Banques { get; set; }
@@ -100,6 +98,244 @@ namespace SalesDB.DB
         public virtual ObjectResult<Select_Branche_Result1> Select_Branche()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Select_Branche_Result1>("Select_Branche");
+        }
+    
+        public virtual int Delete_Branche(Nullable<decimal> barn_ID)
+        {
+            var barn_IDParameter = barn_ID.HasValue ?
+                new ObjectParameter("barn_ID", barn_ID) :
+                new ObjectParameter("barn_ID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_Branche", barn_IDParameter);
+        }
+    
+        public virtual int Insert_Branche(Nullable<decimal> barn_ID, string barn_Code, string barn_Nom, string barn_Mobile, string barn_Fixe, string barn_Adresse, Nullable<System.DateTime> barn_Date_Creation, Nullable<int> barn_Status, string barn_Note, Nullable<decimal> entr_ID)
+        {
+            var barn_IDParameter = barn_ID.HasValue ?
+                new ObjectParameter("barn_ID", barn_ID) :
+                new ObjectParameter("barn_ID", typeof(decimal));
+    
+            var barn_CodeParameter = barn_Code != null ?
+                new ObjectParameter("barn_Code", barn_Code) :
+                new ObjectParameter("barn_Code", typeof(string));
+    
+            var barn_NomParameter = barn_Nom != null ?
+                new ObjectParameter("barn_Nom", barn_Nom) :
+                new ObjectParameter("barn_Nom", typeof(string));
+    
+            var barn_MobileParameter = barn_Mobile != null ?
+                new ObjectParameter("barn_Mobile", barn_Mobile) :
+                new ObjectParameter("barn_Mobile", typeof(string));
+    
+            var barn_FixeParameter = barn_Fixe != null ?
+                new ObjectParameter("barn_Fixe", barn_Fixe) :
+                new ObjectParameter("barn_Fixe", typeof(string));
+    
+            var barn_AdresseParameter = barn_Adresse != null ?
+                new ObjectParameter("barn_Adresse", barn_Adresse) :
+                new ObjectParameter("barn_Adresse", typeof(string));
+    
+            var barn_Date_CreationParameter = barn_Date_Creation.HasValue ?
+                new ObjectParameter("barn_Date_Creation", barn_Date_Creation) :
+                new ObjectParameter("barn_Date_Creation", typeof(System.DateTime));
+    
+            var barn_StatusParameter = barn_Status.HasValue ?
+                new ObjectParameter("barn_Status", barn_Status) :
+                new ObjectParameter("barn_Status", typeof(int));
+    
+            var barn_NoteParameter = barn_Note != null ?
+                new ObjectParameter("barn_Note", barn_Note) :
+                new ObjectParameter("barn_Note", typeof(string));
+    
+            var entr_IDParameter = entr_ID.HasValue ?
+                new ObjectParameter("entr_ID", entr_ID) :
+                new ObjectParameter("entr_ID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Insert_Branche", barn_IDParameter, barn_CodeParameter, barn_NomParameter, barn_MobileParameter, barn_FixeParameter, barn_AdresseParameter, barn_Date_CreationParameter, barn_StatusParameter, barn_NoteParameter, entr_IDParameter);
+        }
+    
+        public virtual int Update_Branche(Nullable<decimal> barn_ID, string barn_Code, string barn_Nom, string barn_Mobile, string barn_Fixe, string barn_Adresse, Nullable<System.DateTime> barn_Date_Creation, Nullable<int> barn_Status, string barn_Note, Nullable<decimal> entr_ID)
+        {
+            var barn_IDParameter = barn_ID.HasValue ?
+                new ObjectParameter("barn_ID", barn_ID) :
+                new ObjectParameter("barn_ID", typeof(decimal));
+    
+            var barn_CodeParameter = barn_Code != null ?
+                new ObjectParameter("barn_Code", barn_Code) :
+                new ObjectParameter("barn_Code", typeof(string));
+    
+            var barn_NomParameter = barn_Nom != null ?
+                new ObjectParameter("barn_Nom", barn_Nom) :
+                new ObjectParameter("barn_Nom", typeof(string));
+    
+            var barn_MobileParameter = barn_Mobile != null ?
+                new ObjectParameter("barn_Mobile", barn_Mobile) :
+                new ObjectParameter("barn_Mobile", typeof(string));
+    
+            var barn_FixeParameter = barn_Fixe != null ?
+                new ObjectParameter("barn_Fixe", barn_Fixe) :
+                new ObjectParameter("barn_Fixe", typeof(string));
+    
+            var barn_AdresseParameter = barn_Adresse != null ?
+                new ObjectParameter("barn_Adresse", barn_Adresse) :
+                new ObjectParameter("barn_Adresse", typeof(string));
+    
+            var barn_Date_CreationParameter = barn_Date_Creation.HasValue ?
+                new ObjectParameter("barn_Date_Creation", barn_Date_Creation) :
+                new ObjectParameter("barn_Date_Creation", typeof(System.DateTime));
+    
+            var barn_StatusParameter = barn_Status.HasValue ?
+                new ObjectParameter("barn_Status", barn_Status) :
+                new ObjectParameter("barn_Status", typeof(int));
+    
+            var barn_NoteParameter = barn_Note != null ?
+                new ObjectParameter("barn_Note", barn_Note) :
+                new ObjectParameter("barn_Note", typeof(string));
+    
+            var entr_IDParameter = entr_ID.HasValue ?
+                new ObjectParameter("entr_ID", entr_ID) :
+                new ObjectParameter("entr_ID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Update_Branche", barn_IDParameter, barn_CodeParameter, barn_NomParameter, barn_MobileParameter, barn_FixeParameter, barn_AdresseParameter, barn_Date_CreationParameter, barn_StatusParameter, barn_NoteParameter, entr_IDParameter);
+        }
+    
+        public virtual int Delete_Entreprise_Info(Nullable<decimal> entr_ID)
+        {
+            var entr_IDParameter = entr_ID.HasValue ?
+                new ObjectParameter("entr_ID", entr_ID) :
+                new ObjectParameter("entr_ID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Delete_Entreprise_Info", entr_IDParameter);
+        }
+    
+        public virtual int Insert_Entreprise_Info(Nullable<decimal> entr_ID, string entr_Code, string entr_Nom, string entr_Adresse1, string entr_Adresse2, string entr_Mobile1, string entr_Mobile2, string entr_Mobile3, string entr_Fixe1, string entr_Fixe2, string entr_Fixe3, string entr_Fax1, string entr_Fax2, string entr_Email, string entr_Note)
+        {
+            var entr_IDParameter = entr_ID.HasValue ?
+                new ObjectParameter("entr_ID", entr_ID) :
+                new ObjectParameter("entr_ID", typeof(decimal));
+    
+            var entr_CodeParameter = entr_Code != null ?
+                new ObjectParameter("entr_Code", entr_Code) :
+                new ObjectParameter("entr_Code", typeof(string));
+    
+            var entr_NomParameter = entr_Nom != null ?
+                new ObjectParameter("entr_Nom", entr_Nom) :
+                new ObjectParameter("entr_Nom", typeof(string));
+    
+            var entr_Adresse1Parameter = entr_Adresse1 != null ?
+                new ObjectParameter("entr_Adresse1", entr_Adresse1) :
+                new ObjectParameter("entr_Adresse1", typeof(string));
+    
+            var entr_Adresse2Parameter = entr_Adresse2 != null ?
+                new ObjectParameter("entr_Adresse2", entr_Adresse2) :
+                new ObjectParameter("entr_Adresse2", typeof(string));
+    
+            var entr_Mobile1Parameter = entr_Mobile1 != null ?
+                new ObjectParameter("entr_Mobile1", entr_Mobile1) :
+                new ObjectParameter("entr_Mobile1", typeof(string));
+    
+            var entr_Mobile2Parameter = entr_Mobile2 != null ?
+                new ObjectParameter("entr_Mobile2", entr_Mobile2) :
+                new ObjectParameter("entr_Mobile2", typeof(string));
+    
+            var entr_Mobile3Parameter = entr_Mobile3 != null ?
+                new ObjectParameter("entr_Mobile3", entr_Mobile3) :
+                new ObjectParameter("entr_Mobile3", typeof(string));
+    
+            var entr_Fixe1Parameter = entr_Fixe1 != null ?
+                new ObjectParameter("entr_Fixe1", entr_Fixe1) :
+                new ObjectParameter("entr_Fixe1", typeof(string));
+    
+            var entr_Fixe2Parameter = entr_Fixe2 != null ?
+                new ObjectParameter("entr_Fixe2", entr_Fixe2) :
+                new ObjectParameter("entr_Fixe2", typeof(string));
+    
+            var entr_Fixe3Parameter = entr_Fixe3 != null ?
+                new ObjectParameter("entr_Fixe3", entr_Fixe3) :
+                new ObjectParameter("entr_Fixe3", typeof(string));
+    
+            var entr_Fax1Parameter = entr_Fax1 != null ?
+                new ObjectParameter("entr_Fax1", entr_Fax1) :
+                new ObjectParameter("entr_Fax1", typeof(string));
+    
+            var entr_Fax2Parameter = entr_Fax2 != null ?
+                new ObjectParameter("entr_Fax2", entr_Fax2) :
+                new ObjectParameter("entr_Fax2", typeof(string));
+    
+            var entr_EmailParameter = entr_Email != null ?
+                new ObjectParameter("entr_Email", entr_Email) :
+                new ObjectParameter("entr_Email", typeof(string));
+    
+            var entr_NoteParameter = entr_Note != null ?
+                new ObjectParameter("entr_Note", entr_Note) :
+                new ObjectParameter("entr_Note", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Insert_Entreprise_Info", entr_IDParameter, entr_CodeParameter, entr_NomParameter, entr_Adresse1Parameter, entr_Adresse2Parameter, entr_Mobile1Parameter, entr_Mobile2Parameter, entr_Mobile3Parameter, entr_Fixe1Parameter, entr_Fixe2Parameter, entr_Fixe3Parameter, entr_Fax1Parameter, entr_Fax2Parameter, entr_EmailParameter, entr_NoteParameter);
+        }
+    
+        public virtual int Update_Entreprise_Info(Nullable<decimal> entr_ID, string entr_Code, string entr_Nom, string entr_Adresse1, string entr_Adresse2, string entr_Mobile1, string entr_Mobile2, string entr_Mobile3, string entr_Fixe1, string entr_Fixe2, string entr_Fixe3, string entr_Fax1, string entr_Fax2, string entr_Email, string entr_Note)
+        {
+            var entr_IDParameter = entr_ID.HasValue ?
+                new ObjectParameter("entr_ID", entr_ID) :
+                new ObjectParameter("entr_ID", typeof(decimal));
+    
+            var entr_CodeParameter = entr_Code != null ?
+                new ObjectParameter("entr_Code", entr_Code) :
+                new ObjectParameter("entr_Code", typeof(string));
+    
+            var entr_NomParameter = entr_Nom != null ?
+                new ObjectParameter("entr_Nom", entr_Nom) :
+                new ObjectParameter("entr_Nom", typeof(string));
+    
+            var entr_Adresse1Parameter = entr_Adresse1 != null ?
+                new ObjectParameter("entr_Adresse1", entr_Adresse1) :
+                new ObjectParameter("entr_Adresse1", typeof(string));
+    
+            var entr_Adresse2Parameter = entr_Adresse2 != null ?
+                new ObjectParameter("entr_Adresse2", entr_Adresse2) :
+                new ObjectParameter("entr_Adresse2", typeof(string));
+    
+            var entr_Mobile1Parameter = entr_Mobile1 != null ?
+                new ObjectParameter("entr_Mobile1", entr_Mobile1) :
+                new ObjectParameter("entr_Mobile1", typeof(string));
+    
+            var entr_Mobile2Parameter = entr_Mobile2 != null ?
+                new ObjectParameter("entr_Mobile2", entr_Mobile2) :
+                new ObjectParameter("entr_Mobile2", typeof(string));
+    
+            var entr_Mobile3Parameter = entr_Mobile3 != null ?
+                new ObjectParameter("entr_Mobile3", entr_Mobile3) :
+                new ObjectParameter("entr_Mobile3", typeof(string));
+    
+            var entr_Fixe1Parameter = entr_Fixe1 != null ?
+                new ObjectParameter("entr_Fixe1", entr_Fixe1) :
+                new ObjectParameter("entr_Fixe1", typeof(string));
+    
+            var entr_Fixe2Parameter = entr_Fixe2 != null ?
+                new ObjectParameter("entr_Fixe2", entr_Fixe2) :
+                new ObjectParameter("entr_Fixe2", typeof(string));
+    
+            var entr_Fixe3Parameter = entr_Fixe3 != null ?
+                new ObjectParameter("entr_Fixe3", entr_Fixe3) :
+                new ObjectParameter("entr_Fixe3", typeof(string));
+    
+            var entr_Fax1Parameter = entr_Fax1 != null ?
+                new ObjectParameter("entr_Fax1", entr_Fax1) :
+                new ObjectParameter("entr_Fax1", typeof(string));
+    
+            var entr_Fax2Parameter = entr_Fax2 != null ?
+                new ObjectParameter("entr_Fax2", entr_Fax2) :
+                new ObjectParameter("entr_Fax2", typeof(string));
+    
+            var entr_EmailParameter = entr_Email != null ?
+                new ObjectParameter("entr_Email", entr_Email) :
+                new ObjectParameter("entr_Email", typeof(string));
+    
+            var entr_NoteParameter = entr_Note != null ?
+                new ObjectParameter("entr_Note", entr_Note) :
+                new ObjectParameter("entr_Note", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Update_Entreprise_Info", entr_IDParameter, entr_CodeParameter, entr_NomParameter, entr_Adresse1Parameter, entr_Adresse2Parameter, entr_Mobile1Parameter, entr_Mobile2Parameter, entr_Mobile3Parameter, entr_Fixe1Parameter, entr_Fixe2Parameter, entr_Fixe3Parameter, entr_Fax1Parameter, entr_Fax2Parameter, entr_EmailParameter, entr_NoteParameter);
         }
     }
 }

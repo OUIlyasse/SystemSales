@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule3 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lcgBranch = new DevExpress.XtraLayout.LayoutControl();
             this.dtCreateDate = new DevExpress.XtraEditors.DateEdit();
@@ -54,7 +51,6 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.vp = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lcgBranch)).BeginInit();
             this.lcgBranch.SuspendLayout();
@@ -79,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vp)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -106,6 +101,7 @@
             this.lcgBranch.Font = new System.Drawing.Font("Lucida Sans", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lcgBranch.Location = new System.Drawing.Point(0, 0);
             this.lcgBranch.Name = "lcgBranch";
+            this.lcgBranch.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(939, 137, 812, 500);
             this.lcgBranch.Root = this.layoutControlGroup1;
             this.lcgBranch.Size = new System.Drawing.Size(858, 435);
             this.lcgBranch.TabIndex = 0;
@@ -139,10 +135,6 @@
             this.txtAddress.Size = new System.Drawing.Size(725, 114);
             this.txtAddress.StyleController = this.lcgBranch;
             this.txtAddress.TabIndex = 8;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule1.ErrorText = "This field is blank, please fill it in";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.vp.SetValidationRule(this.txtAddress, conditionValidationRule1);
             // 
             // txtFixe
             // 
@@ -154,9 +146,6 @@
             this.txtFixe.Size = new System.Drawing.Size(306, 24);
             this.txtFixe.StyleController = this.lcgBranch;
             this.txtFixe.TabIndex = 7;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This field is blank, please fill it in";
-            this.vp.SetValidationRule(this.txtFixe, conditionValidationRule2);
             // 
             // txtMobile
             // 
@@ -176,10 +165,6 @@
             this.txtName.Size = new System.Drawing.Size(306, 24);
             this.txtName.StyleController = this.lcgBranch;
             this.txtName.TabIndex = 5;
-            conditionValidationRule3.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule3.ErrorText = "This field is blank, please fill it in";
-            conditionValidationRule3.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical;
-            this.vp.SetValidationRule(this.txtName, conditionValidationRule3);
             // 
             // txtCode
             // 
@@ -362,7 +347,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,6 +375,5 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
-        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider vp;
     }
 }

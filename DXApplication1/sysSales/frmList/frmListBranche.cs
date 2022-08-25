@@ -2,6 +2,7 @@
 using SalesDB.DB;
 using sysSales.IForms;
 using sysSales.Sub;
+using System;
 using System.Windows.Forms;
 using static myTools.Tools;
 
@@ -37,6 +38,14 @@ namespace sysSales.frmList
         public FrmListBranche()
         {
             InitializeComponent();
+        }
+
+        private void gvBranche_DoubleClick(object sender, System.EventArgs e)
+        {
+            if (gvBranche.FocusedRowHandle != -1)
+            {
+                //brn.barn_ID = Convert.ToDecimal(gvBranche.CurrentRow.Cell[""].Value);
+            }
         }
     }
 }

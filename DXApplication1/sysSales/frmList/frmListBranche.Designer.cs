@@ -73,6 +73,7 @@
             this.gvBranche.OptionsFind.ShowCloseButton = false;
             this.gvBranche.OptionsFind.ShowFindButton = false;
             this.gvBranche.OptionsView.ShowFooter = true;
+            this.gvBranche.DoubleClick += new System.EventHandler(this.gvBranche_DoubleClick);
             // 
             // barn_ID
             // 

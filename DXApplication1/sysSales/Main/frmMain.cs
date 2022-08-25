@@ -33,7 +33,7 @@ namespace sysSales.Main
         }
         private void btnSoftware_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmEntreprise_Info f = new frmEntreprise_Info();
+            frmEntreprise_Info f = new frmEntreprise_Info(this);
             OpenForm(this, f, mdiManager);
         }
         private void timerTimes_Tick(object sender, System.EventArgs e)

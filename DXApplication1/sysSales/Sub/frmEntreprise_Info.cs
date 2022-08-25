@@ -2,6 +2,7 @@
 using SalesDB.DB;
 using SalesDB.Proc_DB;
 using sysSales.IForms;
+using sysSales.Main;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace sysSales.Sub
         private CRUD<Entreprise_Info> crd = new CRUD<Entreprise_Info>();
         private SystemSalesEntities db = new SystemSalesEntities();
         private Entreprise_Info ent;
-
+        private frmMain fm;
         #endregion Varibales
 
         #region myCodes
@@ -35,7 +36,7 @@ namespace sysSales.Sub
         #endregion myCodes
 
         #region Override
-        public override void Data_Add()
+        public override void Data_Add(string msg)
         {
             try
             {
@@ -58,7 +59,7 @@ namespace sysSales.Sub
                     ent.entr_Note = txtNote.Text;
                     if (crd.Add(ent))
                     {
-                        refreshData();
+                        base.Data_Add("Data added successfully");
                     }
                 }
                 else
@@ -68,15 +69,15 @@ namespace sysSales.Sub
             }
             catch (Exception ex)
             {
-                ILmsgBox(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                base.Data_Add(ex.Message);
             }
-            base.Data_Add();
         }
         #endregion Override
-        public frmEntreprise_Info()
+        public frmEntreprise_Info(frmMain fm)
+            : base(fm)
         {
             InitializeComponent();
+            this.fm = fm;
             txtCode.Text = getCode();
         }
     }

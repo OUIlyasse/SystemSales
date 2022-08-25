@@ -93,6 +93,12 @@
     <Compile Include="Main\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notif\frmNotif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notif\frmNotif.Designer.cs">
+      <DependentUpon>frmNotif.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sub\frmBranche.cs">
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notif\frmNotif.resx">
+      <DependentUpon>frmNotif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -174,6 +183,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Recycle_Bin_Full_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accepter_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accepter_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info_48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
