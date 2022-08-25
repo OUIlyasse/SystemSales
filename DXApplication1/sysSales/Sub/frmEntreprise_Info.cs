@@ -1,11 +1,9 @@
-﻿using DevExpress.XtraEditors;
-using SalesDB.DB;
+﻿using SalesDB.DB;
 using SalesDB.Proc_DB;
 using sysSales.IForms;
 using sysSales.Main;
 using System;
 using System.Linq;
-using System.Windows.Forms;
 using static myTools.Tools;
 
 namespace sysSales.Sub
@@ -42,29 +40,26 @@ namespace sysSales.Sub
             {
                 if (vp.Validate())
                 {
-                    ent = new Entreprise_Info();
-                    ent.entr_ID = Convert.ToDecimal(getMaxID());
-                    ent.entr_Code = getCode();
-                    ent.entr_Nom = txtName.Text;
-                    ent.entr_Adresse1 = txtA1.Text;
-                    ent.entr_Adresse2 = txtA2.Text;
-                    ent.entr_Mobile1 = txtM1.Text;
-                    ent.entr_Mobile2 = txtM2.Text;
-                    ent.entr_Fixe1 = txtFi1.Text;
-                    ent.entr_Fixe2 = txtFi2.Text;
-                    ent.entr_Fax1 = txtFa1.Text;
-                    ent.entr_Fax2 = txtFa2.Text;
-                    ent.entr_Email = txtEmail.Text;
+                    var ID = Convert.ToDecimal(getMaxID());
+                    var Code = getCode();
+                    var Nom = txtName.Text;
+                    var Adresse1 = txtA1.Text;
+                    var Adresse2 = txtA2.Text;
+                    var Mobile1 = txtM1.Text;
+                    var Mobile2 = txtM2.Text;
+                    var Mobile3 = txtM3.Text;
+                    var Fixe1 = txtFi1.Text;
+                    var Fixe2 = txtFi2.Text;
+                    var Fixe3 = txtFi3.Text;
+                    var Fax1 = txtFa1.Text;
+                    var Fax2 = txtFa2.Text;
+                    var Email = txtEmail.Text;
                     //ent.entr_Image = getCode();
-                    ent.entr_Note = txtNote.Text;
-                    if (crd.Add(ent))
-                    {
+                    var Note = txtNote.Text;
+                    if (db.Insert_Entreprise_Info(ID, Code, Nom, Adresse1, Adresse2, Mobile1, Mobile2, Mobile3, Fixe1, Fixe2, Fixe3, Fax1, Fax2, Email, Note) > 0)
                         base.Data_Add("Data added successfully");
-                    }
-                }
-                else
-                {
-                    return;
+                    else
+                        base.Data_Add("The name field already exists");
                 }
             }
             catch (Exception ex)

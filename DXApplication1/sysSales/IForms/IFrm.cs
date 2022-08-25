@@ -1,8 +1,6 @@
 ﻿using sysSales.Main;
 using sysSales.Notif;
 using System;
-using System.Windows.Forms;
-using static myTools.Tools;
 using static sysSales.Notif.frmNotif;
 
 namespace sysSales.IForms

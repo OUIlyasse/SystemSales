@@ -1,10 +1,5 @@
 ﻿using DevExpress.XtraEditors;
-using SalesDB.DB;
-using sysSales.Main;
 using System;
-using System.Collections;
-using System.Linq.Expressions;
-using static myTools.Tools;
 
 namespace sysSales.IForms
 {

@@ -12,7 +12,6 @@ namespace sysSales.Sub
     public partial class frmBranche : IFrmOut
     {
         #region Variables
-        private Branche brn;
         private CRUD<Branche> crd = new CRUD<Branche>();
         private SystemSalesEntities db = new SystemSalesEntities();
         private FrmListBranche flb;

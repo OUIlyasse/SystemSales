@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.gcControls = new DevExpress.XtraEditors.GroupControl();
-            this.pnlControls = new System.Windows.Forms.Panel();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnUpdate = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.pnlControls = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.gcControls)).BeginInit();
             this.gcControls.SuspendLayout();
             this.pnlControls.SuspendLayout();
@@ -50,15 +50,6 @@
             this.gcControls.Size = new System.Drawing.Size(439, 81);
             this.gcControls.TabIndex = 0;
             this.gcControls.Text = "groupControl1";
-            // 
-            // pnlControls
-            // 
-            this.pnlControls.Controls.Add(this.gcControls);
-            this.pnlControls.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlControls.Location = new System.Drawing.Point(0, 553);
-            this.pnlControls.Name = "pnlControls";
-            this.pnlControls.Size = new System.Drawing.Size(982, 100);
-            this.pnlControls.TabIndex = 1;
             // 
             // btnDelete
             // 
@@ -107,6 +98,15 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.ToolTipTitle = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // pnlControls
+            // 
+            this.pnlControls.Controls.Add(this.gcControls);
+            this.pnlControls.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlControls.Location = new System.Drawing.Point(0, 553);
+            this.pnlControls.Name = "pnlControls";
+            this.pnlControls.Size = new System.Drawing.Size(982, 100);
+            this.pnlControls.TabIndex = 1;
             // 
             // IFrm
             // 

@@ -2,7 +2,6 @@
 using SalesDB.DB;
 using sysSales.IForms;
 using sysSales.Sub;
-using System;
 using System.Windows.Forms;
 using static myTools.Tools;
 
