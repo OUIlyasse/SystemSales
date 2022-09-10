@@ -83,6 +83,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmNotif";
             this.Text = "frmNotif";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.picNotifi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

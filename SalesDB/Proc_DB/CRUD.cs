@@ -43,6 +43,12 @@ namespace SalesDB.Proc_DB
                 return false;
             }
         }
+
+        public bool Delete(object valeur)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<TEntity> GetAllData()
         {
             try

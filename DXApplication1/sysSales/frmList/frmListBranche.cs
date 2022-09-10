@@ -10,8 +10,6 @@ namespace sysSales.frmList
     public partial class FrmListBranche : IFrmList
     {
         #region Variables
-        private Branche brn;
-        //private CRUD<Entreprise_Info> crd = new CRUD<Entreprise_Info>();
         private SystemSalesEntities db = new SystemSalesEntities();
         private frmBranche f;
         #endregion Variables
@@ -29,7 +27,7 @@ namespace sysSales.frmList
         }
         public override void showForm(XtraForm form)
         {
-            f = new frmBranche(this);
+            f = new frmBranche(this, f);
             f.Text = "Insert Data";
             base.showForm(f);
         }

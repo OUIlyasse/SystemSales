@@ -13,7 +13,6 @@ namespace sysSales.Sub
         #region Varibales
         private CRUD<Entreprise_Info> crd = new CRUD<Entreprise_Info>();
         private SystemSalesEntities db = new SystemSalesEntities();
-        private Entreprise_Info ent;
         private frmMain fm;
         #endregion Varibales
 
